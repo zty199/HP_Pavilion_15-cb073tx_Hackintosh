@@ -2,14 +2,17 @@
 
 这是我使用的惠普光影精灵3黑苹果引导文件，包含了Clover和OpenCore双引导。
 
-# 电脑配置
+## 电脑配置
 
 CPU: Intel Core i5-7300HQ
+
 GPU: Intel HD Graphics 630 (Nvidia GeForce GTX 1050 已屏蔽)
+
 声卡: ALC295 (layout-id = 28)
+
 网卡: Broadcom 94360CS2 + Realtek RTL8111
 
-# Clover配置说明
+## Clover配置说明
 
 Clover版本为5103，驱动目前最新。
 
@@ -27,7 +30,7 @@ USB端口已经打过补丁，不影响USB3.0速率。
 
 序列号已经洗白，但已经被使用过。请参照教程自行洗白。机型建议不用修改。
 
-# OpenCore配置说明
+## OpenCore配置说明
 
 OpenCore版本为0.5.5，驱动目前最新。
 
@@ -43,7 +46,8 @@ OpenCore版本为0.5.5，驱动目前最新。
 
 别的应该没啥了，想试试就用用看。
 
-# 交流群
+## 交流群
 
 惠普电脑装Mac交流群:543758684
+
 OpenCore技术交流群:538643249
