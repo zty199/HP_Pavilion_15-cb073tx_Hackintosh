@@ -154,7 +154,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>QURKVAigQw==</data>
+				<data>QURKVAg=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -162,7 +162,7 @@
 				<key>OemTableId</key>
 				<data></data>
 				<key>Replace</key>
-				<data>WERKVAigQw==</data>
+				<data>WERKVAg=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -180,7 +180,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>Q0xSSQhwAA==</data>
+				<data>Q0xSSQg=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -188,7 +188,7 @@
 				<key>OemTableId</key>
 				<data></data>
 				<key>Replace</key>
-				<data>WExSSQhwAA==</data>
+				<data>WExSSQg=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -206,7 +206,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>X0JTVACgNw==</data>
+				<data>X0JTVAA=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -214,7 +214,7 @@
 				<key>OemTableId</key>
 				<data></data>
 				<key>Replace</key>
-				<data>WEJTVACgNw==</data>
+				<data>WEJTVAA=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -232,7 +232,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>VVBCSQBwXg==</data>
+				<data>VVBCSQA=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -240,7 +240,7 @@
 				<key>OemTableId</key>
 				<data></data>
 				<key>Replace</key>
-				<data>WFBCSQBwXg==</data>
+				<data>WFBCSQA=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -258,7 +258,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>VVBCUwBwXg==</data>
+				<data>VVBCUwA=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -266,7 +266,7 @@
 				<key>OemTableId</key>
 				<data></data>
 				<key>Replace</key>
-				<data>WFBCUwBwXg==</data>
+				<data>WFBCUwA=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -284,7 +284,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>U01SRASgCQ==</data>
+				<data>U01SRAQ=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -292,7 +292,7 @@
 				<key>OemTableId</key>
 				<data></data>
 				<key>Replace</key>
-				<data>WE1SRASgCQ==</data>
+				<data>WE1SRAQ=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -310,7 +310,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>U01XUgSgCQ==</data>
+				<data>U01XUgQ=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -318,7 +318,7 @@
 				<key>OemTableId</key>
 				<data></data>
 				<key>Replace</key>
-				<data>WE1XUgSgCQ==</data>
+				<data>WE1XUgQ=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
