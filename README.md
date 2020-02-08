@@ -8,7 +8,7 @@ CPU: Intel Core i5-7300HQ
 
 GPU: Intel HD Graphics 630 (Nvidia GeForce GTX 1050 已屏蔽)
 
-声卡: ALC295 (layout-id = 28)
+声卡: ALC295 (layout-id = 23)
 
 网卡: Broadcom 94360CS2 + Realtek RTL8111
 
@@ -45,6 +45,10 @@ OpenCore版本为0.5.5，驱动目前最新。
 序列号和Clover里的是同一份，记得自己洗白。
 
 别的应该没啥了，想试试就用用看。
+
+## ALC295_PlugFix
+
+用于修复耳麦二合一插孔插入耳麦时无法切换到外置麦克风的问题，内有使用说明。
 
 ## 交流群
 

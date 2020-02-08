@@ -238,7 +238,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<integer>28</integer>
+			<integer>23</integer>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
@@ -323,7 +323,7 @@
 		<key>EDID</key>
 		<dict>
 			<key>HorizontalSyncPulseWidth</key>
-			<string>0x64</string>
+			<string>0x20</string>
 			<key>Inject</key>
 			<false/>
 			<key>VideoInputSignal</key>
