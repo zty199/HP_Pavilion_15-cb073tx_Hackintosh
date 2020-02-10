@@ -379,7 +379,7 @@
 			</dict>
 		</array>
 		<key>KernelXCPM</key>
-		<false/>
+		<true/>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
@@ -411,6 +411,8 @@
 				<data>SIXAkJCAiyA=</data>
 			</dict>
 		</array>
+		<key>PanicNoKextDump</key>
+		<true/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
