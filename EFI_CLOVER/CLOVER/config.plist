@@ -69,9 +69,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>QURKVAigQw==</data>
+					<data>QURKVAg=</data>
 					<key>Replace</key>
-					<data>WERKVAigQw==</data>
+					<data>WERKVAg=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -79,9 +79,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>Q0xSSQhwAA==</data>
+					<data>Q0xSSQg=</data>
 					<key>Replace</key>
-					<data>WExSSQhwAA==</data>
+					<data>WExSSQg=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -89,9 +89,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>X0JTVACgNw==</data>
+					<data>X0JTVAA=</data>
 					<key>Replace</key>
-					<data>WEJTVACgNw==</data>
+					<data>WEJTVAA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -99,9 +99,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>VVBCSQBwXg==</data>
+					<data>VVBCSQA=</data>
 					<key>Replace</key>
-					<data>WFBCSQBwXg==</data>
+					<data>WFBCSQA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -109,9 +109,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>VVBCUwBwXg==</data>
+					<data>VVBCUwA=</data>
 					<key>Replace</key>
-					<data>WFBCUwBwXg==</data>
+					<data>WFBCUwA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -119,9 +119,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>U01SRASgCQ==</data>
+					<data>U01SRAQ=</data>
 					<key>Replace</key>
-					<data>WE1SRASgCQ==</data>
+					<data>WE1SRAQ=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -129,9 +129,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>U01XUgSgCQ==</data>
+					<data>U01XUgQ=</data>
 					<key>Replace</key>
-					<data>WE1XUgSgCQ==</data>
+					<data>WE1XUgQ=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -199,8 +199,6 @@
 				<key>PStates</key>
 				<true/>
 			</dict>
-			<key>PluginType</key>
-			<string>1</string>
 		</dict>
 	</dict>
 	<key>Boot</key>
