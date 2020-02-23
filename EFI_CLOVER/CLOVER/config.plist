@@ -285,6 +285,8 @@
 			<string>Preboot</string>
 			<string>Recovery</string>
 		</array>
+		<key>KbdPrevLang</key>
+		<false/>
 		<key>Language</key>
 		<string>zh_CN:0</string>
 		<key>Mouse</key>
@@ -299,7 +301,7 @@
 			<integer>8</integer>
 		</dict>
 		<key>PlayAsync</key>
-		<true/>
+		<false/>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
