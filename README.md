@@ -14,7 +14,7 @@ GPU: Intel HD Graphics 630 (Nvidia GeForce GTX 1050 已屏蔽)
 
 ## Clover配置说明
 
-Clover版本为5103，驱动目前最新。
+Clover版本为5104，驱动目前最新。
 
 这个EFI中CLOVER/kexts/other只保留了必要的驱动，博通网卡驱动在CLOVER/kexts/Off里面，建议安装完成后再添加到other中。
 
@@ -30,6 +30,8 @@ USB端口已经打过补丁，不影响USB3.0速率。
 
 序列号已经洗白，但已经被使用过。请参照教程自行洗白。机型建议不用修改。
 
+注意，SmUUID和CustomUUID已经暂时留空，填写说明见下！
+
 ## OpenCore配置说明
 
 OpenCore版本为0.5.5，驱动目前最新。
@@ -44,7 +46,17 @@ OpenCore版本为0.5.5，驱动目前最新。
 
 序列号和Clover里的是同一份，记得自己洗白。
 
-别的应该没啥了，想试试就用用看。
+注意，SystemUUID已经暂时留空，填写说明见下！
+
+## Clover中SmUUID/CustomUUID和OC中SystemUUID填写说明
+
+详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1838605-5-1.html 的 85 楼。
+
+该操作主要为了避免使用OC引导Windows时因为主板UUID注入变化导致激活信息失效的问题。
+
+按照maojinbing大佬的说法，Clover中的CustomUUID和OC中的SystemUUID应该填写主板的UUID，在Windows系统PowerShell中执行 wmic csproduct get uuid 即可获得。
+
+Clover中的SmUUID（硬件UUID）可以暂时不填写。正常情况下，MLB和ROM一致的话，SmUUID的值不会改变。所以在洗白并且填写正确的CustomUUID（Clover）/ SystemUUID（OC）之后，可以在 关于本机-系统报告-硬件概览 中看到此时的硬件UUID，复制并填入config中的SmUUID即可。
 
 ## ALC295_PlugFix
 

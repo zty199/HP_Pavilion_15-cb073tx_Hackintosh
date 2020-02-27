@@ -471,15 +471,11 @@
 		<string>MacBookPro14,3</string>
 		<key>SerialNumber</key>
 		<string>C02X27Y8HTD5</string>
-		<key>SmUUID</key>
-		<string>CB4764FE-002D-4664-AA50-B1B66EBF548E</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
-		<key>CustomUUID</key>
-		<string>CB4764FE-002D-4664-AA50-B1B66EBF548E</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>

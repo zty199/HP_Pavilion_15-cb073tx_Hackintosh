@@ -864,7 +864,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1004,7 +1004,8 @@
 	<key>Misc</key>
 	<dict>
 		<key>BlessOverride</key>
-		<array/>
+		<array>
+		</array>
 		<key>Boot</key>
 		<dict>
 			<key>BuiltinTextRenderer</key>
@@ -1063,7 +1064,7 @@
 			<key>AllowNvramReset</key>
 			<true/>
 			<key>AllowSetDefault</key>
-			<false/>
+			<true/>
 			<key>AuthRestart</key>
 			<false/>
 			<key>ExposeSensitiveData</key>
@@ -1141,7 +1142,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v dart=0 darkwake=0</string>
+				<string>-v dart=0 darkwake=0 -disablegfxfirmware</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>nvda_drv</key>
@@ -1212,7 +1213,7 @@
 			<key>SystemSerialNumber</key>
 			<string>C02X27Y8HTD5</string>
 			<key>SystemUUID</key>
-			<string>CB4764FE-002D-4664-AA50-B1B66EBF548E</string>
+			<string></string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1300,7 +1301,7 @@
 			<key>ReplaceTabWithSpace</key>
 			<false/>
 			<key>RequestBootVarFallback</key>
-			<false/>
+			<true/>
 			<key>RequestBootVarRouting</key>
 			<true/>
 			<key>SanitiseClearScreen</key>

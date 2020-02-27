@@ -194,7 +194,7 @@
 	<string>4.6.8</string>
 	<key>OSBundleLibraries</key>
 	<dict>
-		<key>com.apple.iokit.IOHIDSystem</key>
+		<key>com.apple.iokit.IOHIDFamily</key>
 		<string>1.0.0b1</string>
 		<key>com.apple.kpi.iokit</key>
 		<string>8.0.0</string>
