@@ -6,9 +6,9 @@
 
 CPU: Intel Core i5-7300HQ
 
-GPU: Intel HD Graphics 630 (Nvidia GeForce GTX 1050 已屏蔽)
+GPU: Intel HD Graphics 630（Nvidia GeForce GTX 1050 已屏蔽）
 
-声卡: ALC295 (layout-id = 23)
+声卡: ALC295（layout-id = 23）
 
 网卡: Broadcom 94360CS2 + Realtek RTL8111
 
@@ -16,7 +16,7 @@ GPU: Intel HD Graphics 630 (Nvidia GeForce GTX 1050 已屏蔽)
 
 Clover版本为5104，驱动目前最新。
 
-这个EFI中CLOVER/kexts/other只保留了必要的驱动，博通网卡驱动在CLOVER/kexts/Off里面，建议安装完成后再添加到other中。
+这个EFI中CLOVER/kexts/other只保留了必要的驱动，博通网卡驱动在CLOVER/kexts/Off里面，有需要的话建议安装完成后再添加到other中。
 
 啰嗦模式默认开启，安装完成后可以将启动参数-v删除。
 
@@ -40,7 +40,7 @@ OpenCore版本为0.5.5，驱动目前最新。
 
 所有的ACPI补丁全部拆出来放在了SSDT里面，大多数和clover差不多，而且更严谨。少数补丁由于OC中ACPI改名问题不通用。
 
-由于OC默认所有操作系统使用同一套DSDT，所以有时会出现无法引导Windows的现象。通过SSDT-OC-XOSI.aml补丁对DSDT中操作系统参数设置为Win 10即可正常引导。（相关说明可在宪武大老的项目github/OC-little中看到）
+由于OC默认所有操作系统使用同一套DSDT，所以有时会出现无法引导Windows的现象。通过SSDT-OC-XOSI.aml补丁对DSDT中操作系统参数设置为Win 10即可正常引导。（相关说明可在宪武大佬的项目 https://github.com/daliansky/OC-little 中看到）
 
 睡眠补丁在SSDT-GPRW.aml里，默认不启用。BIOS低于F.18版本可能存在睡眠秒醒问题，请自行启用。
 
