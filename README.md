@@ -16,7 +16,7 @@ GPU: Intel HD Graphics 630（Nvidia GeForce GTX 1050 已屏蔽）
 
 Clover版本为5104，驱动目前最新。
 
-这个EFI中CLOVER/kexts/other只保留了必要的驱动，博通网卡驱动在CLOVER/kexts/Off里面，有需要的话建议安装完成后再添加到other中。
+这个EFI中CLOVER/kexts/other只保留了必要的驱动，Intel蓝牙驱动在CLOVER/kexts/off里面，有需要的话建议安装完成后再添加到other中。
 
 啰嗦模式默认开启，安装完成后可以将启动参数-v删除。
 
