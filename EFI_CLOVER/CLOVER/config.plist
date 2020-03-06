@@ -419,7 +419,7 @@
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
-		<string>0x67</string>
+		<string>0x3E7</string>
 		<key>MLB</key>
 		<string>C02828101GUJ1JHA8</string>
 		<key>MountEFI</key>
