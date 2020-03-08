@@ -64,6 +64,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Disable External GPU</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-Disable_DGPU.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Shortcut key patch for Brightness</string>
 				<key>Enabled</key>
 				<true/>
