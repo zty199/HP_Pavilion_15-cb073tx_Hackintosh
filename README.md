@@ -26,9 +26,11 @@ Clover版本为5104，驱动目前最新。
 
 USB端口已经打过补丁，不影响USB3.0速率。
 
-添加了风扇转速显示补丁SSDT-FANS.aml，但只能显示转速，无法通过软件控制。
+添加了风扇转速显示补丁SSDT-FANS.aml，但只能显示转速，无法通过软件控制。具体教程详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1829706-1-1.html ，计算公式已经修改为正确公式了。
 
 序列号已经洗白，但已经被使用过。请参照教程自行洗白。机型建议不用修改。
+
+触摸板和耳麦输入有关问题见下！
 
 注意，SmUUID和CustomUUID已经暂时留空，填写说明见下！
 
@@ -46,7 +48,19 @@ OpenCore版本为0.5.6，驱动目前最新。
 
 序列号和Clover里的是同一份，记得自己洗白。
 
+触摸板和耳麦输入有关问题见下！
+
 注意，SystemUUID已经暂时留空，填写说明见下！
+
+## 有关于 ELAN PS/2 触摸板多手势的说明
+
+由于 VoodooPS2Controller.kext v1.9.2 只支持移动和按键点击，新版本只支持 Synaptics 触摸板，所以只能使用 ApplePS2SmartTouchPad.kext 。这个驱动10.12时就已经有了，但是由于闭源且原作者不再维护，故在新版系统存在一定bug。我只能修改对应手势使其与新版系统默认设置对应，其他的就没办法了。
+
+使用说明详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1819242-1-1.html 。
+
+## ALC295_PlugFix
+
+用于修复耳麦二合一插孔插入耳麦时无法切换到外置麦克风的问题，内有使用说明。
 
 ## Clover中SmUUID/CustomUUID和OC中SystemUUID填写说明
 
@@ -57,10 +71,6 @@ OpenCore版本为0.5.6，驱动目前最新。
 按照maojinbing大佬的说法，Clover中的CustomUUID和OC中的SystemUUID应该填写主板的UUID，在Windows系统PowerShell中执行 wmic csproduct get uuid 即可获得。
 
 Clover中的SmUUID（硬件UUID）可以暂时不填写。正常情况下，MLB和ROM一致的话，SmUUID的值不会改变。所以在洗白并且填写正确的CustomUUID（Clover）/ SystemUUID（OC）之后，可以在 关于本机-系统报告-硬件概览 中看到此时的硬件UUID，复制并填入config中的SmUUID即可。
-
-## ALC295_PlugFix
-
-用于修复耳麦二合一插孔插入耳麦时无法切换到外置麦克风的问题，内有使用说明。
 
 ## 交流群
 
