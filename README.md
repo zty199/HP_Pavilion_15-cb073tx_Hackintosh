@@ -62,6 +62,18 @@ OpenCore版本为0.5.6，驱动目前最新。
 
 用于修复耳麦二合一插孔插入耳麦时无法切换到外置麦克风的问题，内有使用说明。
 
+## 关于 Type-C 接口视频输出
+
+详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1834012-1-2.html ，以及 http://bbs.pcbeta.com/viewthread-1760287-1-1.html 。
+
+疑似因为 Kext to patch 方法在10.14之后失效（至少缓冲帧注入这方面失效了），上述的第二个帖子的方法在10.15中不管用，这里只讲修改系统驱动文件的方式。
+
+（10.15版本系统中，先终端执行 sudo mount -o rw / && killall Finder 解锁文件系统）通过修改 System/Library/Extensions 中的 AppleGraphicsControl.kext/Contents/PlugIns/AppleGraphicsDevicePolicy.kext/Contents/Info.plist ，在 <key>ConfigMap</key> 中添加一项自己的Board-id，对应值为none。（无法直接修改的话可以拷贝一份出来，修改后再覆盖回去。）Board-id 可在 config.plist 的 SMBIOS 信息中得到。
+
+之后一定要重建缓存！可以使用 Kext Utility ，Hackintool 或者 Kext Updater 等工具，或者终端执行指令。重启后，Type-C接口即可输出图像信号。（由于家境贫寒，只测试了HDMI输出，VGA和DP请自行尝试。）
+
+注意，本方法修改了系统文件，所以每次更新系统后都需要重新操作一次。并且，如果修改了机型，那么 Info.plist 中的 Board-id 也要重新填写。
+
 ## Clover中SmUUID/CustomUUID和OC中SystemUUID填写说明
 
 详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1838605-5-1.html 的 85 楼。
