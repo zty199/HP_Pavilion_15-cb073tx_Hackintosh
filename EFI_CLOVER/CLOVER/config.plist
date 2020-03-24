@@ -258,6 +258,8 @@
 				<data>AAAwAQ==</data>
 				<key>framebuffer-unifiedmem</key>
 				<data>AAAAgA==</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 				<key>model</key>
 				<string>Intel HD Graphics 630</string>
 			</dict>
@@ -308,10 +310,8 @@
 			<true/>
 			<key>Legacy</key>
 			<false/>
-			<key>Linux</key>
-			<false/>
 			<key>Tool</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>ShowOptimus</key>
 		<false/>
@@ -400,7 +400,7 @@
 				<key>Comment</key>
 				<string>External NVME Icon Patch   </string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>SIXAdAeAiyA=</data>
 				<key>InfoPlistPatch</key>

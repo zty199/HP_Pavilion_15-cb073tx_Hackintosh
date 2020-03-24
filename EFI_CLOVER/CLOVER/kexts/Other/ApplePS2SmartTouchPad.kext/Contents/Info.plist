@@ -669,13 +669,13 @@
 				<key>FingersPress</key>
 				<dict>
 					<key>2FingersPressAction</key>
-					<integer>18</integer>
+					<integer>0</integer>
 					<key>3FingersPressAction</key>
-					<integer>19</integer>
+					<integer>0</integer>
 					<key>4FingersPressAction</key>
 					<integer>20</integer>
 					<key>5FingersPressAction</key>
-					<integer>13</integer>
+					<integer>0</integer>
 					<key>FingersPressTimeOut</key>
 					<integer>700</integer>
 				</dict>
@@ -1128,9 +1128,9 @@
 					<key>3FingersTapAction</key>
 					<integer>33</integer>
 					<key>4FingersTapAction</key>
-					<integer>4</integer>
+					<integer>0</integer>
 					<key>5FingersTapAction</key>
-					<integer>5</integer>
+					<integer>0</integer>
 					<key>CornerTapAreaHeight</key>
 					<integer>10</integer>
 					<key>CornerTapAreaLength</key>

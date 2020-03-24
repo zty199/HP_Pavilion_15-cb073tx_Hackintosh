@@ -14,15 +14,15 @@ GPU: Intel HD Graphics 630（Nvidia GeForce GTX 1050 已屏蔽）
 
 ## Clover配置说明
 
-Clover版本为5104，驱动目前最新。
+Clover版本为5107，驱动目前最新。
 
 这个EFI中CLOVER/kexts/other只保留了必要的驱动，Intel蓝牙驱动在CLOVER/kexts/off里面，有需要的话建议安装完成后再添加到other中。
 
 啰嗦模式默认开启，安装完成后可以将启动参数-v删除。
 
-重新把电池补丁放在了SSDT-BATT.aml中，亮度快捷键放在了SSDT-FN.aml中，避免因为DSDT冲突导致打过补丁的DSDT无法使用。
+电池补丁在SSDT-BAT0.aml中，亮度快捷键在SSDT-FN.aml中，避免因为DSDT冲突导致打过补丁的DSDT无法使用。
 
-睡眠补丁在SSDT-GPRW.aml中，默认不启用。如果BIOS版本为F.18应该可以正常睡眠，旧版BIOS存在睡眠秒醒问题。有需要请自行修改config.plist以启用。
+睡眠补丁在SSDT-GPRW.aml中，默认不启用。如果BIOS版本低于F.18可能存在睡眠秒醒问题，有需要请自行修改config.plist以启用。建议优先考虑更新BIOS。
 
 USB端口已经打过补丁，不影响USB3.0速率。
 
@@ -44,7 +44,7 @@ OpenCore版本为0.5.6，驱动目前最新。
 
 由于OC默认所有操作系统使用同一套DSDT，所以有时会出现无法引导Windows的现象。通过SSDT-OC-XOSI.aml补丁对DSDT中操作系统参数设置为Win 10即可正常引导。（相关说明可在宪武大佬的项目 https://github.com/daliansky/OC-little 中看到）
 
-睡眠补丁在SSDT-GPRW.aml里，默认不启用。BIOS低于F.18版本可能存在睡眠秒醒问题，请自行启用。
+睡眠补丁在SSDT-GPRW.aml里，默认不启用。BIOS低于F.18版本可能存在睡眠秒醒问题，请自行启用。建议优先考虑更新BIOS。
 
 序列号和Clover里的是同一份，记得自己洗白。
 
@@ -73,6 +73,8 @@ OpenCore版本为0.5.6，驱动目前最新。
 之后一定要重建缓存！可以使用 Kext Utility ，Hackintool 或者 Kext Updater 等工具，或者终端执行指令。重启后，Type-C接口即可输出图像信号。（由于家境贫寒，只测试了HDMI输出，VGA和DP请自行尝试。）
 
 注意，本方法修改了系统文件，所以每次更新系统后都需要重新操作一次。并且，如果修改了机型，那么 Info.plist 中的 Board-id 也要重新填写。
+
+关于platformid的选择可以看我的帖子 http://bbs.pcbeta.com/viewthread-1849749-1-1.html 。
 
 ## Clover中SmUUID/CustomUUID和OC中SystemUUID填写说明
 
