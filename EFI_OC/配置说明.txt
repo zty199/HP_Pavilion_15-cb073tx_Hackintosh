@@ -1,13 +1,19 @@
 #配置说明
 
-这个是使用OpenCore 0.5.7原版引导的EFI，使用了NDK-BootPicker的GUI界面。请确保你对于CLOVER和OC引导有了足够的了解，能够应对一些突发状况并会自救再进行替换使用。（认真脸）
+EFI维护地址：
+https://github.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
+https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
-这次把所有的ACPI补丁全部拆出来放在了SSDT里面，大多数和clover差不多，而且更严谨。
+这个是使用OpenCore 0.5.7原版引导的EFI，使用了NDK-BootPicker的GUI界面。请确保你对于CLOVER和OC引导有了足够的了解，能够应对一些突发状况并会自救再进行替换使用。
+
+所有的ACPI补丁全部拆出来放在了SSDT里面，大多数和clover差不多，而且更严谨。
 
 由于OC默认所有操作系统使用同一套DSDT，所以有时会出现无法引导Windows的现象。通过SSDT-OC-XOSI.aml补丁对DSDT中操作系统参数设置为Win 10即可正常引导。从BIOS版本F.19开始，ACPI表中补全了Windows的系统参数信息，不再需要这个补丁。该补丁默认启用，但建议考虑更新BIOS。（相关说明可在宪武大佬的项目github/OC-little中看到）
 
 睡眠补丁在SSDT-GPRW.aml里，默认不启用。BIOS低于F.18版本可能存在睡眠秒醒问题，请自行启用。建议优先考虑更新BIOS。
 
-别的应该没啥了，想试试就用用看。
+Kexts中提供了Intel蓝牙的驱动，但是config中默认禁用。有需要的话请自行启用。
 
-欢迎加入OpenCore的研究。(P.S.隔壁OpenCore技术交流群:538643249，全是大佬，真的)
+序列号已经洗白，但已经被群友使用过。请参照教程自行洗白。机型建议不用修改。
+
+欢迎加入 OpenCore技术交流群: 538643249

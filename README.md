@@ -46,7 +46,9 @@ OpenCore版本为0.5.7，使用了NDK-BootPicker的GUI界面，驱动目前最�
 
 睡眠补丁在 SSDT-GPRW.aml 里，默认不启用。BIOS低于F.18版本可能存在睡眠秒醒问题，请自行启用。建议优先考虑更新BIOS。
 
-添加了SSDT-ARTC.aml补丁，修复了每次重启时都会重启两次的问题（感谢 OpenCore技术交流群 的 @iStar 大佬）。该补丁功能与Clover中勾选 AppleRTC 选项效果等同。
+添加了SSDT-ARTC.aml补丁，修复了每次重启时都会重启两次的问题（感谢 OpenCore技术交流群 的 iStar 大佬）。该补丁功能与 Clover 中勾选 AppleRTC 选项效果等同。
+
+Kexts中添加了Intel蓝牙驱动（来自大佬 zxystd 的项目 https://github.com/zxystd/IntelBluetoothFirmware ），但是默认禁用。有需要的话请自行启用。
 
 序列号和Clover里的是同一份，记得自己洗白。
 
