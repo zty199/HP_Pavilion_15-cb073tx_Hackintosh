@@ -46,13 +46,15 @@ OpenCore版本为0.5.7，使用了NDK-BootPicker的GUI界面，驱动目前最�
 
 睡眠补丁在 SSDT-GPRW.aml 里，默认不启用。BIOS低于F.18版本可能存在睡眠秒醒问题，请自行启用。建议优先考虑更新BIOS。
 
+添加了SSDT-ARTC.aml补丁，修复了每次重启时都会重启两次的问题（感谢 OpenCore技术交流群 的 @iStar 大佬）。该补丁功能与Clover中勾选 AppleRTC 选项效果等同。
+
 序列号和Clover里的是同一份，记得自己洗白。
 
 触摸板和耳麦输入有关问题见下！
 
 注意，SystemUUID已经暂时留空，填写说明见下！
 
-## 有关于 ELAN PS/2 触摸板多手势的说明
+## 有关 ELAN PS/2 触摸板多手势驱动
 
 由于 VoodooPS2Controller.kext v1.9.2 只支持移动和按键点击，新版本只支持 Synaptics 触摸板，所以只能使用 ApplePS2SmartTouchPad.kext 。这个驱动10.12时就已经有了，但是由于闭源且原作者不再维护，故在新版系统存在一定bug。我只能修改对应手势使其与新版系统默认设置对应，其他的就没办法了。
 
