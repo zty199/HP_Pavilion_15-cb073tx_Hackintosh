@@ -16,7 +16,7 @@ GPU: Intel HD Graphics 630（Nvidia GeForce GTX 1050 已屏蔽）
 
 Clover版本为5108，驱动目前最新。
 
-这个EFI中 CLOVER/kexts/Other 只保留了必要的驱动，Intel蓝牙驱动在 CLOVER/kexts/Off 里面，有需要的话建议安装完成后再添加到Other中。
+这个EFI中 CLOVER/kexts/Other 只保留了必要的驱动，Intel蓝牙驱动在 CLOVER/kexts/Off 里面，有需要的话建议安装完成后再添加到Other中。（来自大佬 zxystd 的项目 https://github.com/zxystd/IntelBluetoothFirmware ）
 
 啰嗦模式默认开启，安装完成后可以将启动参数-v删除。
 
@@ -48,7 +48,7 @@ OpenCore版本为0.5.7，使用了NDK-BootPicker的GUI界面，驱动目前最�
 
 添加了SSDT-ARTC.aml补丁，修复了每次重启时都会重启两次的问题（感谢 OpenCore技术交流群 的 iStar 大佬）。该补丁功能与 Clover 中勾选 AppleRTC 选项效果等同。
 
-Kexts中添加了Intel蓝牙驱动（来自大佬 zxystd 的项目 https://github.com/zxystd/IntelBluetoothFirmware ），但是默认禁用。有需要的话请自行启用。
+Kexts中添加了Intel蓝牙驱动，但是默认禁用。有需要的话请自行启用。
 
 序列号和Clover里的是同一份，记得自己洗白。
 
@@ -68,7 +68,7 @@ Kexts中添加了Intel蓝牙驱动（来自大佬 zxystd 的项目 https://githu
 
 ## 关于 Type-C 接口视频输出
 
-### 方法一：（感谢 OpenCore技术交流群 的 @iStar 大佬）
+### 方法一：（感谢 OpenCore技术交流群 的 iStar 大佬）
 
 添加启动参数 agdpmod=vit9696 来禁用 Board-id 侦测，选择合适的 platformid 即可正常输出。
 
