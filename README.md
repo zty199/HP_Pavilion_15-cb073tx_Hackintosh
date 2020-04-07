@@ -36,7 +36,7 @@ USB端口已经打过补丁，不影响USB3.0速率。
 
 ## OpenCore配置说明
 
-OpenCore版本为0.5.6，驱动目前最新。
+OpenCore版本为0.5.7，使用了NDK-BootPicker的GUI界面，驱动目前最新。
 
 在使用这个EFI前请确保你对于CLOVER和OC引导有了足够的了解，能够应对一些突发状况并会自救。
 
@@ -63,6 +63,12 @@ OpenCore版本为0.5.6，驱动目前最新。
 用于修复耳麦二合一插孔插入耳麦时无法切换到外置麦克风的问题，内有使用说明。
 
 ## 关于 Type-C 接口视频输出
+
+### 方法一：（感谢 OpenCore技术交流群 的 @iStar 大佬）
+
+添加启动参数 agdpmod=vit9696 来禁用 Board-id 侦测，选择合适的 platformid 即可正常输出。
+
+### 方法二：（直接修改系统驱动 AGDP ，不推荐）
 
 详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1834012-1-2.html ，以及 http://bbs.pcbeta.com/viewthread-1760287-1-1.html 。
 

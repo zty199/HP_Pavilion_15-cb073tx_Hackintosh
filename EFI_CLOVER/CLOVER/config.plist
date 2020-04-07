@@ -204,7 +204,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v dart=0 darkwake=0</string>
+		<string>-v dart=0 darkwake=0 agdpmod=vit9696</string>
 		<key>Debug</key>
 		<false/>
 		<key>Default Loader</key>
