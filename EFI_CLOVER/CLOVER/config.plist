@@ -290,7 +290,7 @@
 		<key>KbdPrevLang</key>
 		<false/>
 		<key>Language</key>
-		<string>zh_CN:0</string>
+		<string>zh-Hant:-16899</string>
 		<key>Mouse</key>
 		<dict>
 			<key>DoubleClick</key>
