@@ -4,7 +4,7 @@ EFI维护地址：
 https://github.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
-这个是使用Clover 5108引导的EFI。CLOVER/kexts/other只保留了必要的驱动，Intel蓝牙驱动在CLOVER/kexts/Off里面，建议安装完成后再添加到other中。
+这个是使用Clover 5111引导的EFI。CLOVER/kexts/other只保留了必要的驱动，Intel蓝牙驱动在CLOVER/kexts/Off里面，建议安装完成后再添加到other中。
 
 啰嗦模式默认开启，安装完成后可以将启动参数-v删除。
 
