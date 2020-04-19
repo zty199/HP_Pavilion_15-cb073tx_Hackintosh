@@ -6,6 +6,8 @@ https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
 这个是使用OpenCore 0.5.7原版引导的EFI，使用了NDK-BootPicker的GUI界面。请确保你对于CLOVER和OC引导有了足够的了解，能够应对一些突发状况并会自救再进行替换使用。
 
+由于 OC 的 内存驱动 与相关 quirk 似乎与 Linux 有冲突，暂时没办法正常引导 Linux ，会卡在 “载入初始化内存盘” 。
+
 所有的ACPI补丁全部拆出来放在了SSDT里面，大多数和clover差不多，而且更严谨。
 
 由于OC默认所有操作系统使用同一套DSDT，所以有时会出现无法引导Windows的现象。通过SSDT-OC-XOSI.aml补丁对DSDT中操作系统参数设置为Win 10即可正常引导。从BIOS版本F.19开始，ACPI表中补全了Windows的系统参数信息，不再需要这个补丁。该补丁默认启用，但建议考虑更新BIOS。（相关说明可在宪武大佬的项目github/OC-little中看到）
