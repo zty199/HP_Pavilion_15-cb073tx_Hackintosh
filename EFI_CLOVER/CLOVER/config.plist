@@ -19,7 +19,7 @@
 				<key>AddHDMI</key>
 				<false/>
 				<key>AddPNLF</key>
-				<false/>
+				<true/>
 				<key>FixDarwin</key>
 				<false/>
 				<key>FixDisplay</key>
@@ -41,6 +41,8 @@
 				<key>FixWAK</key>
 				<false/>
 			</dict>
+			<key>PNLF_UID</key>
+			<string>0x10</string>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -235,19 +237,22 @@
 	<dict>
 		<key>Audio</key>
 		<dict>
-			<key>Inject</key>
-			<integer>23</integer>
 			<key>ResetHDA</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>Properties</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+			<dict>
+				<key>alc-delay</key>
+				<data>9AEAAA==</data>
+				<key>layout-id</key>
+				<data>FwAAAA==</data>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>AAAbWQ==</data>
-				<key>device-id</key>
-				<data>G1kAAA==</data>
 				<key>disable-external-gpu</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-fbmem</key>
@@ -258,10 +263,6 @@
 				<data>AAAwAQ==</data>
 				<key>framebuffer-unifiedmem</key>
 				<data>AAAAgA==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>model</key>
-				<string>Intel HD Graphics 630</string>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -430,11 +431,11 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>12/16/2019</string>
+		<string>01/31/2020</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP143.88Z.F000.B00.1912161510</string>
+		<string>MBP143.88Z.F000.B00.2001311754</string>
 		<key>Board-ID</key>
 		<string>Mac-551B86E5744E2388</string>
 		<key>BoardManufacturer</key>
@@ -452,7 +453,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>204.0.0.0.0</string>
+		<string>205.0.0.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
@@ -480,8 +481,6 @@
 		<string>Yes</string>
 		<key>InjectSystemID</key>
 		<true/>
-		<key>NvidiaWeb</key>
-		<false/>
 	</dict>
 </dict>
 </plist>

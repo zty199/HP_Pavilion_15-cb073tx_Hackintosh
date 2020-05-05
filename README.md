@@ -14,11 +14,11 @@ GPU: Intel HD Graphics 630（Nvidia GeForce GTX 1050 已屏蔽）
 
 ## Clover配置说明
 
-Clover版本为5112，驱动目前最新。
+Clover版本为5115，驱动目前最新。
 
 这个EFI中 CLOVER/kexts/Other 只保留了必要的驱动，Intel蓝牙驱动在 CLOVER/kexts/Off 里面，有需要的话建议安装完成后再添加到Other中。（来自大佬 zxystd 的项目 https://github.com/zxystd/IntelBluetoothFirmware ）
 
-CLOVER/drivers/UEFI 中的内存驱动由 AptioMemoryFix.efi 换成 OsxAptioFix3Drv.efi ，解决了 Clover 引导 Linux 时会卡在 载入初始化内存盘的问题。
+CLOVER/drivers/UEFI 中的内存驱动由 AptioMemoryFix.efi 换成 OsxAptioFix3Drv.efi ，解决了 Clover 引导 Linux 时会卡在 “载入初始化内存盘” 的问题。
 
 啰嗦模式默认开启，安装完成后可以将启动参数-v删除。
 
@@ -38,7 +38,7 @@ USB端口已经打过补丁，不影响USB3.0速率。
 
 ## OpenCore配置说明
 
-OpenCore版本为0.5.7，使用了NDK-BootPicker的GUI界面，驱动目前最新。
+OpenCore版本为0.5.8，使用了NDK-BootPicker的GUI界面，驱动目前最新。
 
 在使用这个EFI前请确保你对于CLOVER和OC引导有了足够的了解，能够应对一些突发状况并会自救。
 
