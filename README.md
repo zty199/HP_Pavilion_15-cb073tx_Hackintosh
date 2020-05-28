@@ -14,7 +14,7 @@ GPU: Intel HD Graphics 630（Nvidia GeForce GTX 1050 已屏蔽）
 
 ## Clover配置说明
 
-Clover版本为5117，驱动目前最新。
+Clover版本为5118，驱动目前最新。
 
 这个EFI中 CLOVER/kexts/Other 只保留了必要的驱动，Intel蓝牙驱动在 CLOVER/kexts/Off 里面，有需要的话建议安装完成后再添加到Other中。（来自大佬 zxystd 的项目 https://github.com/zxystd/IntelBluetoothFirmware ）
 
