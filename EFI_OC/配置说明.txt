@@ -4,7 +4,7 @@ EFI维护地址：
 https://github.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
-这个是使用OpenCore 0.5.8原版引导的EFI，使用了NDK-BootPicker的GUI界面。请确保你对于CLOVER和OC引导有了足够的了解，能够应对一些突发状况并会自救再进行替换使用。
+这个是使用OpenCore 0.5.9原版引导的EFI，使用了OC原始的GUI界面。请确保你对于CLOVER和OC引导有了足够的了解，能够应对一些突发状况并会自救再进行替换使用。
 
 由于OC的内存驱动与相关quirk似乎与Linux有冲突，暂时没办法正常引导Linux，会卡在“载入初始化内存盘”。
 
