@@ -323,12 +323,8 @@
 	<dict>
 		<key>EDID</key>
 		<dict>
-			<key>HorizontalSyncPulseWidth</key>
-			<string>0x20</string>
 			<key>Inject</key>
 			<false/>
-			<key>VideoInputSignal</key>
-			<string>0xA5</string>
 		</dict>
 		<key>Inject</key>
 		<dict>
@@ -356,6 +352,8 @@
 		<false/>
 		<key>DellSMBIOSPatch</key>
 		<false/>
+		<key>EightApple</key>
+		<true/>
 		<key>ForceKextsToLoad</key>
 		<array>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
