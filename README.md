@@ -44,13 +44,13 @@ OpenCore版本为0.5.9，使用了OC原始的GUI界面，驱动目前最新。
 
 由于 OC 的 内存驱动 与相关 quirk 似乎与 Linux 有冲突，暂时没办法正常引导 Linux ，会卡在 “载入初始化内存盘” 。
 
-所有的ACPI补丁全部拆出来放在了SSDT里面，大多数和clover差不多，而且更严谨。所有OC的补丁可以用于Clover引导。
+所有的ACPI补丁全部拆出来放在了SSDT里面，更新了新的电池补丁（感谢OC交流群大佬 @iStar 和 @常原），解决OC引导Windows时睡眠唤醒后部分设备断电无法使用的问题（键盘，触摸板，网卡等）。
 
 由于OC默认所有操作系统使用同一套DSDT，所以有时会出现无法引导Windows的现象。通过 SSDT-OC-XOSI.aml 补丁对DSDT中操作系统参数设置为Win 10即可正常引导。从BIOS版本F.19开始，ACPI表中补全了Windows的系统参数信息，不再需要这个补丁。该补丁默认启用，但建议考虑更新BIOS。( 相关说明可在宪武大佬的项目 https://github.com/daliansky/OC-little 中看到）
 
 睡眠补丁在 SSDT-GPRW.aml 里，默认不启用。BIOS低于F.18版本可能存在睡眠秒醒问题，请自行启用。建议优先考虑更新BIOS。
 
-添加了SSDT-ARTC.aml补丁，修复了每次重启时都会重启两次的问题（感谢 OpenCore技术交流群 的 iStar 大佬）。该补丁功能与 Clover 中勾选 AppleRTC 选项效果等同。
+添加了SSDT-RTC0.aml补丁，修复了每次重启时都会重启两次的问题（感谢OC交流群大佬 @iStar）。该补丁功能与 Clover 中勾选 FixRTC 选项效果等同。
 
 Kexts中添加了Intel蓝牙驱动，但是默认禁用。有需要的话请自行启用。
 
@@ -72,7 +72,7 @@ Kexts中添加了Intel蓝牙驱动，但是默认禁用。有需要的话请自�
 
 ## 关于 Type-C 接口视频输出
 
-### 方法一：（感谢 OpenCore技术交流群 的 iStar 大佬）
+### 方法一：（感谢OC交流群大佬 @iStar）
 
 添加启动参数 agdpmod=vit9696 来禁用 Board-id 侦测，选择合适的 platformid 即可正常输出。
 
