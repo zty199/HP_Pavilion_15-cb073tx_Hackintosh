@@ -20,6 +20,8 @@ Clover版本为5119，驱动目前最新。
 
 CLOVER/drivers/UEFI 中的内存驱动由 AptioMemoryFix.efi 换成 OsxAptioFix3Drv.efi ，解决了 Clover 引导 Linux 时会卡在 “载入初始化内存盘” 的问题。
 
+修复了Type-C接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
+
 啰嗦模式默认开启，安装完成后可以将启动参数-v删除。
 
 电池补丁在 SSDT-BAT0.aml 中，亮度快捷键在 SSDT-FN.aml 中，避免因为DSDT冲突导致打过补丁的DSDT无法使用。
@@ -43,6 +45,8 @@ OpenCore版本为0.5.9，使用了OC原始的GUI界面，驱动目前最新。
 在使用这个EFI前请确保你对于CLOVER和OC引导有了足够的了解，能够应对一些突发状况并会自救。
 
 OpenCore 0.5.9版本可以正常引导Linux，不会卡在“载入初始化内存盘”。
+
+修复了Type-C接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
 所有的ACPI补丁全部拆出来放在了SSDT里面，更新了新的电池补丁（感谢OC交流群大佬 @iStar 和 @常原），解决OC引导Windows时睡眠唤醒后部分设备断电无法使用的问题（键盘，触摸板，网卡等）。
 
@@ -89,6 +93,10 @@ Kexts中添加了Intel蓝牙驱动，但是默认禁用。有需要的话请自�
 注意，本方法修改了系统文件，所以每次更新系统后都需要重新操作一次。并且，如果修改了机型，那么 Info.plist 中的 Board-id 也要重新填写。
 
 关于platformid的选择可以看我的帖子 http://bbs.pcbeta.com/viewthread-1849749-1-1.html 。
+
+## 关于 Type-C 接口HDMI_DP数字音频输出
+
+使用 AppleALC.kext + FakePCIID.kext + FakePCIID_Intel_HDMI_Audio.kext ，在声卡设备属性添加 device-id 属性，类型 Data ，字段值 70A10000 ，即可正常使用音频输出。使用USB DAC转换3.5mm耳机接口与此无关，可正常使用。（EFI中定制了FakePCIID，合并了驱动补丁为一个）
 
 ## Clover中 SmUUID / CustomUUID 和OC中 SystemUUID 填写说明
 

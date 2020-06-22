@@ -8,6 +8,8 @@ https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
 CLOVER/drivers/UEFI中的内存驱动由AptioMemoryFix.efi换成OsxAptioFix3Drv.efi，解决了Clover引导Linux时会卡在载入初始化内存盘的问题。
 
+修复了Type-C接口的视频输出和音频输出。
+
 啰嗦模式默认开启，安装完成后可以将启动参数-v删除。
 
 重新把电池补丁放在了SSDT-BAT0.aml中，亮度快捷键放在了SSDT-FN.aml中，避免因为DSDT冲突导致打过补丁的DSDT无法使用。

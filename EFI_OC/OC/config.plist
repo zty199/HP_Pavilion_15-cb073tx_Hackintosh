@@ -476,6 +476,8 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
+				<key>device-id</key>
+				<data>cKEAAA==</data>
 				<key>layout-id</key>
 				<data>FwAAAA==</data>
 				<key>alc-delay</key>
@@ -574,7 +576,7 @@
 				<key>BundlePath</key>
 				<string>CodecCommander.kext</string>
 				<key>Comment</key>
-				<string></string>
+				<string>ALCPlugFix for Ext Mic</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -771,6 +773,22 @@
 				<false/>
 				<key>ExecutablePath</key>
 				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>FakePCIID.kext</string>
+				<key>Comment</key>
+				<string>Intel HDMI Audio patches</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/FakePCIID</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>

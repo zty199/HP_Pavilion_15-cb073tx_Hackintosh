@@ -8,7 +8,9 @@ https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
 OpenCore 0.5.9版本可以正常引导Linux，不会卡在“载入初始化内存盘”。
 
-所有的ACPI补丁全部拆出来放在了SSDT里面，更新了新的电池补丁（感谢OC交流群大佬 @iStar 和 @常原），解决OC引导Windows时睡眠唤醒后部分设备断电无法使用的问题（键盘，触摸板，网卡等）。
+修复了Type-C接口的视频输出和音频输出。
+
+所有的ACPI补丁全部拆出来放在了SSDT里面，更新了新的电池补丁，解决OC引导Windows时睡眠唤醒后部分设备断电无法使用的问题（键盘，触摸板，网卡等）。
 
 由于OC默认所有操作系统使用同一套DSDT，所以有时会出现无法引导Windows的现象。通过SSDT-OC-XOSI.aml补丁对DSDT中操作系统参数设置为Win 10即可正常引导。从BIOS版本F.19开始，ACPI表中补全了Windows的系统参数信息，不再需要这个补丁。该补丁默认启用，但建议考虑更新BIOS。（相关说明可在宪武大佬的项目github/OC-little中看到）
 
