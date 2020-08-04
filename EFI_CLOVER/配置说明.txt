@@ -4,19 +4,17 @@ EFI维护地址：
 https://github.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
-这个是使用Clover 5119引导的EFI。CLOVER/kexts/other只保留了必要的驱动，Intel蓝牙驱动在CLOVER/kexts/Off里面，建议安装完成后再添加到other中。
-
-CLOVER/drivers/UEFI中的内存驱动由AptioMemoryFix.efi换成OsxAptioFix3Drv.efi，解决了Clover引导Linux时会卡在载入初始化内存盘的问题。
+这个是使用 Clover 5120 引导的EFI。CLOVER/kexts/Other 只保留了必要的驱动。
 
 修复了Type-C接口的视频输出和音频输出。
 
 啰嗦模式默认开启，安装完成后可以将启动参数-v删除。
 
-重新把电池补丁放在了SSDT-BAT0.aml中，亮度快捷键放在了SSDT-FN.aml中，避免因为DSDT冲突导致打过补丁的DSDT无法使用。
+重新把电池补丁放在了 SSDT-BAT0.aml 中，亮度快捷键放在了 SSDT-FN.aml 中，避免因为 DSDT冲突 导致打过补丁的 DSDT 无法使用。
 
-睡眠补丁在SSDT-GPRW.aml中，默认不启用。如果BIOS版本低于F.18可能存在睡眠秒醒问题，有需要请自行修改config.plist以启用。建议优先考虑更新BIOS。
+睡眠补丁在 SSDT-GPRW.aml 中，默认不启用。如果 BIOS版本 低于 F.18 可能存在睡眠秒醒问题，有需要请自行修改 config.plist 以启用。建议优先考虑 更新BIOS。
 
-USB端口已经打过补丁，不影响USB3.0速率。
+USB端口 已经打过补丁，不影响 USB3.0 速率。
 
 添加了风扇转速显示补丁，但只能显示转速，无法通过件控制。
 

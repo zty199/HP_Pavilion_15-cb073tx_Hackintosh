@@ -8,29 +8,27 @@ CPU: Intel Core i5-7300HQ
 
 GPU: Intel HD Graphics 630（Nvidia GeForce GTX 1050 已屏蔽）
 
-声卡: Realtek ALC295（layout-id = 23）
+声卡: Realtek ALC295（layout-id = 24）
 
 网卡: Intel 7265ngw（已更换为 Broadcom BCM94360CS2）+ Realtek RTL8111
 
 ## Clover配置说明
 
-Clover版本为5119，驱动目前最新。
+Clover版本 为 5120，驱动目前最新。
 
-这个EFI中 CLOVER/kexts/Other 只保留了必要的驱动，Intel蓝牙驱动在 CLOVER/kexts/Off 里面，有需要的话建议安装完成后再添加到Other中。（来自大佬 zxystd 的项目 https://github.com/zxystd/IntelBluetoothFirmware ）
+这个EFI中 CLOVER/kexts/Other 只保留了必要的驱动。（Intel网卡相关驱动请至 https://github.com/OpenIntelWireless 自行下载）
 
-CLOVER/drivers/UEFI 中的内存驱动由 AptioMemoryFix.efi 换成 OsxAptioFix3Drv.efi ，解决了 Clover 引导 Linux 时会卡在 “载入初始化内存盘” 的问题。
+修复了 Type-C接口 的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
-修复了Type-C接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
-
-啰嗦模式默认开启，安装完成后可以将启动参数-v删除。
+啰嗦模式默认开启，安装完成后可以将启动参数 -v 删除。
 
 电池补丁在 SSDT-BAT0.aml 中，亮度快捷键在 SSDT-FN.aml 中，避免因为DSDT冲突导致打过补丁的DSDT无法使用。
 
 睡眠补丁在 SSDT-GPRW.aml 中，默认不启用。如果BIOS版本低于F.18可能存在睡眠秒醒问题，有需要请自行修改 config.plist 以启用。建议优先考虑更新BIOS。
 
-USB端口已经打过补丁，不影响USB3.0速率。
+USB端口 已经打过补丁，不影响 USB3.0 速率。
 
-添加了风扇转速显示补丁 SSDT-FANS.aml，但只能显示转速，无法通过软件控制。具体教程详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1829706-1-1.html ，计算公式已经修改为正确公式了。
+添加了风扇转速显示补丁 SSDT-FANS.aml，但只能显示转速，无法通过软件控制。（具体教程详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1829706-1-1.html ，计算公式已经修改为正确公式）
 
 序列号已经洗白，但已经被使用过。请参照教程自行洗白。机型建议不用修改。
 
@@ -40,11 +38,9 @@ USB端口已经打过补丁，不影响USB3.0速率。
 
 ## OpenCore配置说明
 
-OpenCore版本为0.5.9，使用了OC原始的GUI界面，驱动目前最新。
+OpenCore版本为0.6.0，使用了OC原始的GUI界面，驱动目前最新。
 
 在使用这个EFI前请确保你对于CLOVER和OC引导有了足够的了解，能够应对一些突发状况并会自救。
-
-OpenCore 0.5.9版本可以正常引导Linux，不会卡在“载入初始化内存盘”。
 
 修复了Type-C接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -55,8 +51,6 @@ OpenCore 0.5.9版本可以正常引导Linux，不会卡在“载入初始化内�
 睡眠补丁在 SSDT-GPRW.aml 里，默认不启用。BIOS低于F.18版本可能存在睡眠秒醒问题，请自行启用。建议优先考虑更新BIOS。
 
 添加了SSDT-RTC0.aml补丁，修复了每次重启时都会重启两次的问题（感谢OC交流群大佬 @iStar）。该补丁功能与 Clover 中勾选 FixRTC 选项效果等同。
-
-Kexts中添加了Intel蓝牙驱动，但是默认禁用。有需要的话请自行启用。
 
 序列号和Clover里的是同一份，记得自己洗白。
 

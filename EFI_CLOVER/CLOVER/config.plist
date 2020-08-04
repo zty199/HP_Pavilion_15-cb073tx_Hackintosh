@@ -4,192 +4,6 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
-		<key>AutoMerge</key>
-		<true/>
-		<key>DSDT</key>
-		<dict>
-			<key>Debug</key>
-			<false/>
-			<key>DropOEM_DSM</key>
-			<false/>
-			<key>Fixes</key>
-			<dict>
-				<key>AddDTGP</key>
-				<false/>
-				<key>AddHDMI</key>
-				<false/>
-				<key>AddPNLF</key>
-				<true/>
-				<key>FixDarwin</key>
-				<false/>
-				<key>FixDisplay</key>
-				<false/>
-				<key>FixHDA</key>
-				<false/>
-				<key>FixHPET</key>
-				<false/>
-				<key>FixIPIC</key>
-				<false/>
-				<key>FixRTC</key>
-				<false/>
-				<key>FixShutdown</key>
-				<false/>
-				<key>FixTMR</key>
-				<false/>
-				<key>FixUSB</key>
-				<false/>
-				<key>FixWAK</key>
-				<false/>
-			</dict>
-			<key>PNLF_UID</key>
-			<string>0x10</string>
-			<key>Patches</key>
-			<array>
-				<dict>
-					<key>Comment</key>
-					<string>change EC0 to EC</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RUMwXw==</data>
-					<key>Replace</key>
-					<data>RUNfXw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change SAT0 to SATA</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>U0FUMA==</data>
-					<key>Replace</key>
-					<data>U0FUQQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change ADJT to XDJT for Battery Hotpatch</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>QURKVAg=</data>
-					<key>Replace</key>
-					<data>WERKVAg=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change CLRI to XLRI for Battery Hotpatch</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>Q0xSSQg=</data>
-					<key>Replace</key>
-					<data>WExSSQg=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _BST to XBST for Battery Hotpatch</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X0JTVAA=</data>
-					<key>Replace</key>
-					<data>WEJTVAA=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change UPBI to XPBI for Battery Hotpatch</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>VVBCSQA=</data>
-					<key>Replace</key>
-					<data>WFBCSQA=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change UPBS to XPBS for Battery Hotpatch</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>VVBCUwA=</data>
-					<key>Replace</key>
-					<data>WFBCUwA=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change SMRD to XMRD for Battery Hotpatch</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>U01SRAQ=</data>
-					<key>Replace</key>
-					<data>WE1SRAQ=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change SMWR to XMWR for Battery Hotpatch</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>U01XUgQ=</data>
-					<key>Replace</key>
-					<data>WE1XUgQ=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1ExMAA=</data>
-					<key>Replace</key>
-					<data>WFExMAA=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1ExMQA=</data>
-					<key>Replace</key>
-					<data>WFExMQA=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>R1BSVwI=</data>
-					<key>Replace</key>
-					<data>WFBSVwI=</data>
-				</dict>
-			</array>
-		</dict>
-		<key>DisabledAML</key>
-		<array>
-			<string>SSDT-GPRW.aml</string>
-		</array>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>#MCFG</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>xh_rvp10</string>
-			</dict>
-		</array>
-		<key>FixHeaders</key>
-		<true/>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
@@ -202,87 +16,218 @@
 				<true/>
 			</dict>
 		</dict>
+		<key>DisabledAML</key>
+		<array>
+			<string>SSDT-GPRW.aml</string>
+		</array>
+		<key>AutoMerge</key>
+		<false/>
+		<key>DSDT</key>
+		<dict>
+			<key>Patches</key>
+			<array>
+				<dict>
+					<key>Find</key>
+					<data>RUMwXw==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change EC0 to EC</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>U0FUMA==</data>
+					<key>Replace</key>
+					<data>U0FUQQ==</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change SAT0 to SATA</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>QURKVAg=</data>
+					<key>Replace</key>
+					<data>WERKVAg=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change ADJT to XDJT for Battery Hotpatch</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>Q0xSSQg=</data>
+					<key>Replace</key>
+					<data>WExSSQg=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change CLRI to XLRI for Battery Hotpatch</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>X0JTVAA=</data>
+					<key>Replace</key>
+					<data>WEJTVAA=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change _BST to XBST for Battery Hotpatch</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>VVBCSQA=</data>
+					<key>Replace</key>
+					<data>WFBCSQA=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change UPBI to XPBI for Battery Hotpatch</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>VVBCUwA=</data>
+					<key>Replace</key>
+					<data>WFBCUwA=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change UPBS to XPBS for Battery Hotpatch</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>U01SRAQ=</data>
+					<key>Replace</key>
+					<data>WE1SRAQ=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change SMRD to XMRD for Battery Hotpatch</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>U01XUgQ=</data>
+					<key>Replace</key>
+					<data>WE1XUgQ=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change SMWR to XMWR for Battery Hotpatch</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>X1ExMAA=</data>
+					<key>Replace</key>
+					<data>WFExMAA=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>X1ExMQA=</data>
+					<key>Replace</key>
+					<data>WFExMQA=</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>R1BSVwI=</data>
+					<key>Replace</key>
+					<data>WFBSVwI=</data>
+					<key>Disabled</key>
+					<true/>
+					<key>Comment</key>
+					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
+				</dict>
+			</array>
+			<key>Fixes</key>
+			<dict>
+				<key>FixUSB</key>
+				<false/>
+				<key>FixDisplay</key>
+				<false/>
+				<key>FixHPET</key>
+				<false/>
+				<key>FixTMR</key>
+				<false/>
+				<key>FixDarwin</key>
+				<false/>
+				<key>FixShutdown</key>
+				<false/>
+				<key>FixWAK</key>
+				<false/>
+				<key>FixRTC</key>
+				<true/>
+				<key>FixIPIC</key>
+				<false/>
+				<key>AddDTGP</key>
+				<false/>
+				<key>AddPNLF</key>
+				<true/>
+				<key>FixHDA</key>
+				<false/>
+				<key>AddHDMI</key>
+				<false/>
+			</dict>
+			<key>DropOEM_DSM</key>
+			<false/>
+			<key>PNLF_UID</key>
+			<string>0x10</string>
+			<key>Debug</key>
+			<false/>
+		</dict>
+		<key>DropTables</key>
+		<array>
+			<dict>
+				<key>Signature</key>
+				<string>#MCFG</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>DMAR</string>
+			</dict>
+		</array>
+		<key>FixHeaders</key>
+		<false/>
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>Arguments</key>
-		<string>-v dart=0 darkwake=0 agdpmod=vit9696</string>
-		<key>Debug</key>
-		<false/>
-		<key>Default Loader</key>
-		<string>bootmgfw.efi</string>
-		<key>DefaultVolume</key>
-		<string>LastBootedVolume</string>
-		<key>HibernationFixup</key>
-		<false/>
+		<key>NoEarlyProgress</key>
+		<true/>
 		<key>Legacy</key>
 		<string>PBR</string>
-		<key>NoEarlyProgress</key>
+		<key>HibernationFixup</key>
 		<false/>
 		<key>Secure</key>
 		<false/>
-		<key>Timeout</key>
-		<integer>5</integer>
+		<key>Debug</key>
+		<false/>
+		<key>Arguments</key>
+		<string>-v dart=0 darkwake=0 agdpmod=vit9696</string>
+		<key>Default Loader</key>
+		<string>bootmgfw.efi</string>
 		<key>XMPDetection</key>
 		<string>Yes</string>
-	</dict>
-	<key>CPU</key>
-	<dict>
-		<key>HWPEnable</key>
-		<true/>
-		<key>UseARTFrequency</key>
-		<true/>
-	</dict>
-	<key>Devices</key>
-	<dict>
-		<key>Audio</key>
-		<dict>
-			<key>ResetHDA</key>
-			<false/>
-		</dict>
-		<key>Properties</key>
-		<dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-			<dict>
-				<key>alc-delay</key>
-				<data>9AEAAA==</data>
-				<key>device-id</key>
-				<data>cKEAAA==</data>
-				<key>layout-id</key>
-				<data>FwAAAA==</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>AAAbWQ==</data>
-				<key>disable-external-gpu</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>framebuffer-unifiedmem</key>
-				<data>AAAAgA==</data>
-			</dict>
-		</dict>
-		<key>USB</key>
-		<dict>
-			<key>AddClockID</key>
-			<true/>
-			<key>FixOwnership</key>
-			<true/>
-			<key>HighCurrent</key>
-			<true/>
-			<key>Inject</key>
-			<true/>
-		</dict>
-		<key>UseIntelHDMI</key>
-		<false/>
+		<key>Timeout</key>
+		<integer>5</integer>
+		<key>DefaultVolume</key>
+		<string>LastBootedVolume</string>
 	</dict>
 	<key>GUI</key>
 	<dict>
+		<key>PlayAsync</key>
+		<false/>
+		<key>KbdPrevLang</key>
+		<false/>
+		<key>Language</key>
+		<string>zh-Hant:-16899</string>
 		<key>Hide</key>
 		<array>
 			<string>BOOTX64.EFI</string>
@@ -290,36 +235,83 @@
 			<string>Preboot</string>
 			<string>Recovery</string>
 		</array>
-		<key>KbdPrevLang</key>
-		<false/>
-		<key>Language</key>
-		<string>zh-Hant:-16899</string>
-		<key>Mouse</key>
-		<dict>
-			<key>DoubleClick</key>
-			<integer>500</integer>
-			<key>Enabled</key>
-			<false/>
-			<key>Mirror</key>
-			<false/>
-			<key>Speed</key>
-			<integer>8</integer>
-		</dict>
-		<key>PlayAsync</key>
-		<false/>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
 			<true/>
-			<key>Legacy</key>
-			<false/>
 			<key>Tool</key>
 			<true/>
+			<key>Legacy</key>
+			<false/>
+		</dict>
+		<key>Mouse</key>
+		<dict>
+			<key>Speed</key>
+			<integer>8</integer>
+			<key>DoubleClick</key>
+			<integer>500</integer>
+			<key>Mirror</key>
+			<false/>
 		</dict>
 		<key>ShowOptimus</key>
 		<false/>
 		<key>Theme</key>
 		<string>hp</string>
+	</dict>
+	<key>CPU</key>
+	<dict>
+		<key>UseARTFrequency</key>
+		<true/>
+		<key>HWPEnable</key>
+		<true/>
+	</dict>
+	<key>Devices</key>
+	<dict>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+			<dict>
+				<key>layout-id</key>
+				<data>GAAAAA==</data>
+				<key>device-id</key>
+				<data>cKEAAA==</data>
+				<key>alc-delay</key>
+				<data>9AEAAA==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>AAAbWQ==</data>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>AAAAgA==</data>
+				<key>disable-external-gpu</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
+			</dict>
+		</dict>
+		<key>Audio</key>
+		<dict>
+			<key>ResetHDA</key>
+			<false/>
+		</dict>
+		<key>USB</key>
+		<dict>
+			<key>FixOwnership</key>
+			<true/>
+			<key>AddClockID</key>
+			<true/>
+			<key>Inject</key>
+			<true/>
+			<key>HighCurrent</key>
+			<true/>
+		</dict>
+		<key>UseIntelHDMI</key>
+		<false/>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -328,6 +320,8 @@
 			<key>Inject</key>
 			<false/>
 		</dict>
+		<key>NvidiaSingle</key>
+		<false/>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -337,141 +331,139 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
-		<key>LoadVBios</key>
-		<false/>
-		<key>NvidiaSingle</key>
-		<false/>
 		<key>PatchVBios</key>
+		<false/>
+		<key>LoadVBios</key>
 		<false/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
-		<key>AppleIntelCPUPM</key>
+		<key>KernelLapic</key>
 		<true/>
-		<key>AppleRTC</key>
+		<key>KextsToPatch</key>
+		<array>
+			<dict>
+				<key>Find</key>
+				<data>AEFQUExFIFNTRAA=</data>
+				<key>Name</key>
+				<string>com.apple.iokit.IOAHCIBlockStorage</string>
+				<key>Replace</key>
+				<data>AAAAAAAAAAAAAAA=</data>
+				<key>Disabled</key>
+				<true/>
+				<key>Comment</key>
+				<string>Enable TRIM for SSD</string>
+				<key>InfoPlistPatch</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Find</key>
+				<data>SIXAdAeAiyA=</data>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>SIXAkJCAiyA=</data>
+				<key>Disabled</key>
+				<true/>
+				<key>Comment</key>
+				<string>External NVME Icon Patch   </string>
+				<key>InfoPlistPatch</key>
+				<false/>
+			</dict>
+		</array>
+		<key>PanicNoKextDump</key>
 		<true/>
-		<key>Debug</key>
-		<false/>
-		<key>DellSMBIOSPatch</key>
-		<false/>
+		<key>KernelToPatch</key>
+		<array>
+			<dict>
+				<key>Find</key>
+				<data>ILniAAAADzA=</data>
+				<key>Replace</key>
+				<data>ILniAAAAkJA=</data>
+				<key>Disabled</key>
+				<false/>
+				<key>Comment</key>
+				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
+			</dict>
+		</array>
 		<key>EightApple</key>
 		<true/>
+		<key>KernelPm</key>
+		<false/>
+		<key>AppleRTC</key>
+		<false/>
+		<key>KernelXCPM</key>
+		<true/>
+		<key>DellSMBIOSPatch</key>
+		<false/>
 		<key>ForceKextsToLoad</key>
 		<array>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
 		</array>
 		<key>KernelCpu</key>
 		<false/>
-		<key>KernelLapic</key>
-		<true/>
-		<key>KernelPm</key>
-		<true/>
-		<key>KernelToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>ILniAAAADzA=</data>
-				<key>Replace</key>
-				<data>ILniAAAAkJA=</data>
-			</dict>
-		</array>
-		<key>KernelXCPM</key>
-		<true/>
-		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Enable TRIM for SSD</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>AEFQUExFIFNTRAA=</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.iokit.IOAHCIBlockStorage</string>
-				<key>Replace</key>
-				<data>AAAAAAAAAAAAAAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>External NVME Icon Patch   </string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>SIXAdAeAiyA=</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>SIXAkJCAiyA=</data>
-			</dict>
-		</array>
-		<key>PanicNoKextDump</key>
-		<true/>
+		<key>Debug</key>
+		<false/>
+		<key>AppleIntelCPUPM</key>
+		<false/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>BooterConfig</key>
-		<string>0x28</string>
 		<key>CsrActiveConfig</key>
-		<string>0x3E7</string>
-		<key>MLB</key>
-		<string>C02828101GUJ1JHA8</string>
+		<string>0xBE7</string>
 		<key>MountEFI</key>
 		<string>Yes</string>
+		<key>MLB</key>
+		<string>C02828101GUJ1JHA8</string>
 		<key>ROM</key>
 		<data>kdh9v1SO</data>
+		<key>BooterConfig</key>
+		<string>0x28</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BiosReleaseDate</key>
-		<string>04/24/2020</string>
-		<key>BiosVendor</key>
-		<string>Apple Inc.</string>
-		<key>BiosVersion</key>
-		<string>MBP143.88Z.F000.B00.2004240928</string>
+		<key>FirmwareFeatures</key>
+		<string>0xFC0FE17E</string>
 		<key>Board-ID</key>
 		<string>Mac-551B86E5744E2388</string>
-		<key>BoardManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>C02828101GUJ1JHA8</string>
-		<key>BoardType</key>
-		<integer>10</integer>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFF1FFF7F</string>
 		<key>BoardVersion</key>
 		<string>1.0</string>
-		<key>ChassisAssetTag</key>
-		<string>MacBook-Aluminum</string>
-		<key>ChassisManufacturer</key>
+		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
 		<string>0x09</string>
-		<key>EfiVersion</key>
-		<string>207.0.0.0.0</string>
-		<key>Family</key>
-		<string>MacBook Pro</string>
-		<key>FirmwareFeatures</key>
-		<string>0xFC0FE17E</string>
-		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF7F</string>
-		<key>LocationInChassis</key>
-		<string>Part Component</string>
-		<key>Manufacturer</key>
+		<key>BiosVersion</key>
+		<string>MBP143.88Z.F000.B00.2004240928</string>
+		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>Mobile</key>
-		<true/>
+		<key>ChassisAssetTag</key>
+		<string>MacBook-Aluminum</string>
 		<key>PlatformFeature</key>
 		<string>0x1A</string>
+		<key>Family</key>
+		<string>MacBook Pro</string>
+		<key>BoardSerialNumber</key>
+		<string>C02828101GUJ1JHA8</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
 		<key>ProductName</key>
 		<string>MacBookPro14,3</string>
+		<key>Mobile</key>
+		<true/>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>EfiVersion</key>
+		<string>207.0.0.0.0</string>
 		<key>SerialNumber</key>
 		<string>C02X27Y8HTD5</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>BiosReleaseDate</key>
+		<string>04/24/2020</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
@@ -480,6 +472,21 @@
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
+		<true/>
+	</dict>
+	<key>Quirks</key>
+	<dict>
+		<key>EnableSafeModeSlide</key>
+		<true/>
+		<key>SetupVirtualMap</key>
+		<true/>
+		<key>ProtectSecureBoot</key>
+		<true/>
+		<key>AvoidRuntimeDefrag</key>
+		<true/>
+		<key>ProvideCustomSlide</key>
+		<true/>
+		<key>EnableWriteUnprotector</key>
 		<true/>
 	</dict>
 </dict>
