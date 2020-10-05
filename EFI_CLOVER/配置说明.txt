@@ -1,22 +1,16 @@
-#配置说明
+# 配置说明
 
 EFI维护地址：
 https://github.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
-这个是使用 Clover 5120 引导的EFI。CLOVER/kexts/Other 只保留了必要的驱动。
+这个是使用 Clover 5123 引导的EFI。CLOVER/kexts/Other 只保留了必要的驱动，目前最新。
 
 修复了Type-C接口的视频输出和音频输出。
 
-啰嗦模式默认开启，安装完成后可以将启动参数-v删除。
-
-重新把电池补丁放在了 SSDT-BAT0.aml 中，亮度快捷键放在了 SSDT-FN.aml 中，避免因为 DSDT冲突 导致打过补丁的 DSDT 无法使用。
-
-睡眠补丁在 SSDT-GPRW.aml 中，默认不启用。如果 BIOS版本 低于 F.18 可能存在睡眠秒醒问题，有需要请自行修改 config.plist 以启用。建议优先考虑 更新BIOS。
-
-USB端口 已经打过补丁，不影响 USB3.0 速率。
-
 添加了风扇转速显示补丁，但只能显示转速，无法通过件控制。
+
+不再提供睡眠补丁，如有需要请在历史版本中自行提取添加。
 
 序列号已经洗白，但已经被群友使用过。请参照教程自行洗白。机型建议不用修改。
 
