@@ -4,7 +4,7 @@ EFI维护地址：
 https://github.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
-这个是使用 OpenCore 0.6.1版 引导的EFI，驱动目前最新。
+这个是使用 OpenCore 0.6.2 引导的EFI，驱动目前最新。
 
 修复了 Type-C 接口的视频输出和音频输出。
 

@@ -24,13 +24,13 @@ Clover 版本 为 5123，驱动目前最新。
 
 序列号已经洗白，但已经被使用过。请参照教程自行洗白。机型建议不用修改。
 
-触摸板和耳麦输入有关问题见下！
+耳麦输入有关问题见下！
 
 注意，SmUUID和CustomUUID已经暂时留空，填写说明见下！
 
 ## OpenCore 配置说明
 
-OpenCore 版本为 0.6.1，驱动目前最新。
+OpenCore 版本为 0.6.2，驱动目前最新。
 
 修复了 Type-C 接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -42,15 +42,15 @@ OpenCore 版本为 0.6.1，驱动目前最新。
 
 序列号和 Clover 里的是同一份，记得自己洗白。
 
-触摸板和耳麦输入有关问题见下！
+耳麦输入有关问题见下！
 
 注意，SystemUUID 已经暂时留空，填写说明见下！
 
 ## 有关 ELAN PS/2 触摸板多手势驱动
 
-由于 VoodooPS2Controller.kext v1.9.2 只支持移动和按键点击，新版本只支持 Synaptics 触摸板，所以只能使用 ApplePS2SmartTouchPad.kext 。这个驱动10.12时就已经有了，但是由于闭源且原作者不再维护，故在新版系统存在一定bug。我只能修改对应手势使其与新版系统默认设置对应，其他的就没办法了。
+VoodooPS2 从 2.1.7 版本开始合并了 ELAN TouchPad 驱动相关代码，已经完全支持触摸板多手势。故替换了 ApplePS2SmartTouchPad.kext，操作更加顺滑。
 
-使用说明详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1819242-1-1.html 。
+（ApplePS2SmartTouchPad.kext 驱动修改和使用说明详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1819242-1-1.html ）
 
 ## ALC295_PlugFix
 
@@ -60,7 +60,7 @@ OpenCore 版本为 0.6.1，驱动目前最新。
 
 添加启动参数 agdpmod=vit9696 来禁用 Board-id 侦测，选择合适的 platformid 即可正常输出。
 
-关于 platformid 的选择可以看我的帖子 http://bbs.pcbeta.com/viewthread-1849749-1-1.html 。
+（platformid 的选择可以看我的帖子 http://bbs.pcbeta.com/viewthread-1849749-1-1.html ）
 
 ## 关于 Type-C 接口 HDMI_DP 数字音频输出
 
