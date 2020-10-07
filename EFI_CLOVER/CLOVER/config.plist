@@ -6,8 +6,6 @@
 	<dict>
 		<key>SSDT</key>
 		<dict>
-			<key>DropOem</key>
-			<false/>
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
@@ -16,8 +14,21 @@
 				<true/>
 			</dict>
 		</dict>
-		<key>AutoMerge</key>
-		<false/>
+		<key>DropTables</key>
+		<array>
+			<dict>
+				<key>Signature</key>
+				<string>MCFG</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>DMAR</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>BGRT</string>
+			</dict>
+		</array>
 		<key>DSDT</key>
 		<dict>
 			<key>Patches</key>
@@ -135,114 +146,67 @@
 			</array>
 			<key>Fixes</key>
 			<dict>
-				<key>FixUSB</key>
-				<false/>
-				<key>FixDisplay</key>
-				<false/>
-				<key>FixHPET</key>
-				<false/>
-				<key>FixTMR</key>
-				<false/>
-				<key>FixDarwin</key>
-				<false/>
-				<key>FixShutdown</key>
-				<false/>
-				<key>FixWAK</key>
-				<false/>
-				<key>FixRTC</key>
-				<true/>
-				<key>FixIPIC</key>
-				<false/>
-				<key>AddDTGP</key>
-				<false/>
 				<key>AddPNLF</key>
 				<true/>
-				<key>FixHDA</key>
-				<false/>
-				<key>AddHDMI</key>
-				<false/>
+				<key>FixRTC</key>
+				<true/>
 			</dict>
-			<key>DropOEM_DSM</key>
-			<false/>
 			<key>PNLF_UID</key>
 			<string>0x10</string>
-			<key>Debug</key>
-			<false/>
+			<key>DropTables</key>
+			<array>
+				<dict>
+					<key>Signature</key>
+					<string>MCFG</string>
+				</dict>
+				<dict>
+					<key>Signature</key>
+					<string>DMAR</string>
+				</dict>
+				<dict>
+					<key>Signature</key>
+					<string>BGRT</string>
+				</dict>
+			</array>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>#MCFG</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-		</array>
-		<key>FixHeaders</key>
-		<false/>
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>NoEarlyProgress</key>
-		<true/>
-		<key>Legacy</key>
-		<string>PBR</string>
-		<key>HibernationFixup</key>
-		<false/>
-		<key>Secure</key>
-		<false/>
-		<key>Debug</key>
-		<false/>
-		<key>Arguments</key>
-		<string>-v dart=0 darkwake=10 agdpmod=vit9696</string>
-		<key>Default Loader</key>
-		<string>bootmgfw.efi</string>
-		<key>XMPDetection</key>
-		<string>Yes</string>
 		<key>Timeout</key>
 		<integer>5</integer>
+		<key>NoEarlyProgress</key>
+		<true/>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
+		<key>Arguments</key>
+		<string>-v dart=0 darkwake=10 agdpmod=vit9696</string>
+		<key>Legacy</key>
+		<string>PBR</string>
+		<key>XMPDetection</key>
+		<string>Yes</string>
 	</dict>
 	<key>GUI</key>
 	<dict>
-		<key>PlayAsync</key>
-		<false/>
-		<key>KbdPrevLang</key>
-		<false/>
-		<key>Language</key>
-		<string>zh-Hant:-16899</string>
+		<key>Theme</key>
+		<string>hp</string>
 		<key>Hide</key>
 		<array>
-			<string>BOOTX64.EFI</string>
+			<string>BOOTX64.efi</string>
 			<string>Windows</string>
 			<string>Preboot</string>
 			<string>Recovery</string>
 		</array>
+		<key>Language</key>
+		<string>zh-Hant:-16899</string>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
 			<true/>
 			<key>Tool</key>
-			<true/>
+			<false/>
 			<key>Legacy</key>
 			<false/>
 		</dict>
-		<key>Mouse</key>
-		<dict>
-			<key>Speed</key>
-			<integer>8</integer>
-			<key>DoubleClick</key>
-			<integer>500</integer>
-			<key>Mirror</key>
-			<false/>
-		</dict>
-		<key>ShowOptimus</key>
-		<false/>
-		<key>Theme</key>
-		<string>hp</string>
 	</dict>
 	<key>CPU</key>
 	<dict>
@@ -253,6 +217,11 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>USB</key>
+		<dict>
+			<key>FixOwnership</key>
+			<true/>
+		</dict>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
@@ -266,91 +235,38 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>AAAbWQ==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
 				<key>framebuffer-unifiedmem</key>
 				<data>AAAAgA==</data>
-				<key>disable-external-gpu</key>
+				<key>AAPL,ig-platform-id</key>
+				<data>AAAbWQ==</data>
+				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
+				<key>disable-external-gpu</key>
+				<data>AQAAAA==</data>
 			</dict>
 		</dict>
-		<key>Audio</key>
-		<dict>
-			<key>ResetHDA</key>
-			<false/>
-		</dict>
-		<key>USB</key>
-		<dict>
-			<key>FixOwnership</key>
-			<true/>
-			<key>AddClockID</key>
-			<true/>
-			<key>Inject</key>
-			<true/>
-			<key>HighCurrent</key>
-			<true/>
-		</dict>
-		<key>UseIntelHDMI</key>
-		<false/>
-	</dict>
-	<key>Graphics</key>
-	<dict>
-		<key>EDID</key>
-		<dict>
-			<key>Inject</key>
-			<false/>
-		</dict>
-		<key>NvidiaSingle</key>
-		<false/>
-		<key>Inject</key>
-		<dict>
-			<key>ATI</key>
-			<false/>
-			<key>Intel</key>
-			<false/>
-			<key>NVidia</key>
-			<false/>
-		</dict>
-		<key>PatchVBios</key>
-		<false/>
-		<key>LoadVBios</key>
-		<false/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
-		<key>AppleRTC</key>
-		<false/>
-		<key>KernelPm</key>
-		<false/>
-		<key>KernelLapic</key>
-		<false/>
 		<key>PanicNoKextDump</key>
-		<false/>
-		<key>KernelXCPM</key>
-		<false/>
-		<key>Debug</key>
-		<false/>
+		<true/>
 		<key>EightApple</key>
-		<false/>
-		<key>DellSMBIOSPatch</key>
-		<false/>
-		<key>AppleIntelCPUPM</key>
-		<false/>
-		<key>KernelCpu</key>
-		<false/>
+		<true/>
+		<key>KernelXCPM</key>
+		<true/>
+		<key>KernelLapic</key>
+		<true/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
 		<key>CsrActiveConfig</key>
 		<string>0xBE7</string>
-		<key>MountEFI</key>
-		<string>Yes</string>
 		<key>MLB</key>
 		<string>C02828101GUJ1JHA8</string>
 		<key>ROM</key>
@@ -373,7 +289,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>BiosVersion</key>
-		<string>MBP143.88Z.F000.B00.2004240928</string>
+		<string>MBP143.88Z.F000.B00.2006161755</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisAssetTag</key>
@@ -395,13 +311,13 @@
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>EfiVersion</key>
-		<string>207.0.0.0.0</string>
+		<string>428.0.0.0.0</string>
 		<key>SerialNumber</key>
 		<string>C02X27Y8HTD5</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>BiosReleaseDate</key>
-		<string>04/24/2020</string>
+		<string>06/16/2020</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
@@ -414,96 +330,44 @@
 	</dict>
 	<key>Quirks</key>
 	<dict>
-		<key>DisableLinkeditJettison</key>
-		<true/>
-		<key>PanicNoKextDump</key>
-		<true/>
-		<key>LapicKernelPanic</key>
-		<true/>
-		<key>ThirdPartyDrives</key>
-		<false/>
-		<key>SyncRuntimePermissions</key>
-		<false/>
-		<key>XhciPortLimit</key>
-		<false/>
-		<key>EnableWriteUnprotector</key>
-		<true/>
-		<key>PowerTimeoutKernelPanic</key>
-		<true/>
-		<key>DummyPowerManagement</key>
-		<false/>
-		<key>ProvideMaxSlide</key>
-		<integer>0</integer>
-		<key>ProvideCustomSlide</key>
-		<true/>
-		<key>EnableSafeModeSlide</key>
-		<true/>
-		<key>ForceExitBootServices</key>
-		<false/>
-		<key>ProtectSecureBoot</key>
-		<false/>
-		<key>DisableVariableWrite</key>
-		<false/>
-		<key>AppleXcpmCfgLock</key>
-		<true/>
-		<key>DisableRtcChecksum</key>
-		<false/>
 		<key>AvoidRuntimeDefrag</key>
 		<true/>
-		<key>MmioWhitelist</key>
-		<array>
-			<dict>
-				<key>Address</key>
-				<integer>4275159040</integer>
-				<key>Comment</key>
-				<string>Haswell: SB_RCBA is a 0x4 page memory region, containing SPI_BASE at 0x3800 (SPI_BASE_ADDRESS)</string>
-				<key>Enabled</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Address</key>
-				<integer>4278190080</integer>
-				<key>Comment</key>
-				<string>Generic: PCI root is a 0x1000 page memory region used by some firmwares</string>
-				<key>Enabled</key>
-				<false/>
-			</dict>
-		</array>
-		<key>DisableIoMapper</key>
-		<false/>
-		<key>ProtectMemoryRegions</key>
-		<false/>
-		<key>ProvideConsoleGopEnable</key>
-		<false/>
-		<key>SetupVirtualMap</key>
-		<true/>
-		<key>ExternalDiskIcons</key>
-		<false/>
 		<key>DevirtualiseMmio</key>
-		<false/>
-		<key>ProtectUefiServices</key>
-		<false/>
-		<key>AppleXcpmForceBoost</key>
-		<false/>
-		<key>CustomSMBIOSGuid</key>
-		<false/>
-		<key>IncreasePciBarSize</key>
 		<false/>
 		<key>DisableSingleUser</key>
 		<false/>
+		<key>DisableVariableWrite</key>
+		<false/>
 		<key>DiscardHibernateMap</key>
 		<false/>
-		<key>FuzzyMatch</key>
+		<key>EnableSafeModeSlide</key>
 		<true/>
-		<key>AppleXcpmExtraMsrs</key>
+		<key>EnableWriteUnprotector</key>
+		<true/>
+		<key>ForceExitBootServices</key>
 		<false/>
+		<key>MmioWhitelist</key>
+		<array>
+		</array>
+		<key>ProtectMemoryRegions</key>
+		<false/>
+		<key>ProtectSecureBoot</key>
+		<false/>
+		<key>ProtectUefiServices</key>
+		<false/>
+		<key>ProvideConsoleGopEnable</key>
+		<true/>
+		<key>ProvideCustomSlide</key>
+		<true/>
+		<key>ProvideMaxSlide</key>
+		<integer>0</integer>
 		<key>RebuildAppleMemoryMap</key>
 		<false/>
-		<key>AppleCpuPmCfgLock</key>
-		<false/>
-		<key>KernelCache</key>
-		<string>Auto</string>
+		<key>SetupVirtualMap</key>
+		<true/>
 		<key>SignalAppleOS</key>
+		<false/>
+		<key>SyncRuntimePermissions</key>
 		<false/>
 	</dict>
 </dict>

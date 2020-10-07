@@ -33,6 +33,10 @@
 				<string>bottom</string>
 			</dict>
 			<dict>
+				<key>DistanceFromScreenEdgeX%</key>
+				<integer>28</integer>
+				<key>DistanceFromScreenEdgeY%</key>
+				<integer>48</integer>
 				<key>FrameTime</key>
 				<integer>200</integer>
 				<key>Frames</key>
@@ -41,6 +45,10 @@
 				<integer>4</integer>
 				<key>Path</key>
 				<string>Anim_2_Options</string>
+				<key>ScreenEdgeX</key>
+				<string>left</string>
+				<key>ScreenEdgeY</key>
+				<string>bottom</string>
 			</dict>
 		</array>
 		<key>Background</key>

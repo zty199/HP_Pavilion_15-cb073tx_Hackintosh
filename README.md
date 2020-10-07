@@ -14,7 +14,7 @@ GPU: Intel HD Graphics 630（NVidia GeForce GTX 1050 已屏蔽）
 
 ## Clover 配置说明
 
-Clover 版本 为 5123，驱动目前最新。
+Clover 版本 为 5122，驱动目前最新。
 
 修复了 Type-C接口 的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 

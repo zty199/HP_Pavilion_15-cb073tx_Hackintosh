@@ -4,7 +4,7 @@ EFI维护地址：
 https://github.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
-这个是使用 Clover 5123 引导的EFI。CLOVER/kexts/Other 只保留了必要的驱动，目前最新。
+这个是使用 Clover 5122 引导的EFI，驱动目前最新。
 
 修复了Type-C接口的视频输出和音频输出。
 
