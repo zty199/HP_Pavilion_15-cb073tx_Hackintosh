@@ -282,6 +282,8 @@
 		<string>Apple Inc.</string>
 		<key>ProductName</key>
 		<string>MacBookPro14,3</string>
+		<key>SmUUID</key>
+		<string></string>
 		<key>Mobile</key>
 		<true/>
 		<key>BoardType</key>
