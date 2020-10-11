@@ -14,9 +14,9 @@ GPU: Intel HD Graphics 630（NVidia GeForce GTX 1050 已屏蔽）
 
 ## Clover 配置说明
 
-Clover 版本 为 5122，驱动目前最新。
+Clover 版本 为 5123，支持安装和引导 macOS Big Sur。
 
-修复了 Type-C接口 的视频输出和音频输出（感谢OC交流群大佬 @常原）。
+修复了 Type-C 接口 的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
 添加了风扇转速显示补丁 SSDT-FANS.aml，但只能显示转速，无法通过软件控制。（具体教程详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1829706-1-1.html ，计算公式已经修改为正确公式）
 
@@ -30,7 +30,7 @@ Clover 版本 为 5122，驱动目前最新。
 
 ## OpenCore 配置说明
 
-OpenCore 版本为 0.6.2，驱动目前最新。
+OpenCore 版本为 0.6.2，支持安装和引导 macOS Big Sur。
 
 修复了 Type-C 接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -64,17 +64,17 @@ VoodooPS2 从 2.1.7 版本开始合并了 ELAN TouchPad 驱动相关代码，已
 
 ## 关于 Type-C 接口 HDMI_DP 数字音频输出
 
-使用 AppleALC.kext + FakePCIID.kext + FakePCIID_Intel_HDMI_Audio.kext ，在声卡设备属性添加 device-id 属性，类型 Data ，字段值 70A10000 ，即可正常使用音频输出。使用USB DAC转换3.5mm耳机接口与此无关，可正常使用。（EFI中定制了FakePCIID，合并了驱动补丁为一个）
+使用 AppleALC.kext + FakePCIID.kext + FakePCIID_Intel_HDMI_Audio.kext ，在声卡设备属性添加 device-id 属性，类型 Data ，字段值 70A10000 ，即可正常使用音频输出。使用 USB DAC 转换3.5mm耳机接口与此无关，可正常使用。（EFI 中定制了 FakePCIID，合并了驱动补丁为一个）
 
 ## Clover 中 SmUUID / CustomUUID 和 OC 中 SystemUUID 填写说明
 
 详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1838605-5-1.html 的 85 楼。
 
-该操作主要为了避免使用OC引导Windows时因为主板UUID注入变化导致激活信息失效的问题。
+该操作主要为了避免使用 OC 引导 Windows 时因为 主板 UUID 注入变化导致激活信息失效的问题。
 
-按照maojinbing大佬的说法，Clover中的 CustomUUID 和OC中的 SystemUUID 应该填写主板的UUID，在Windows系统PowerShell中执行 wmic csproduct get uuid 即可获得。
+按照 maojinbing 大佬 的说法，Clover 中的 CustomUUID 和 OC 中的 SystemUUID 应该填写 主板 的 UUID，在 Windows 系统中以管理员身份运行 PowerShell，执行 wmic csproduct get uuid 即可获得。
 
-Clover中的 SmUUID（硬件UUID）可以暂时不填写。正常情况下，MLB和ROM一致的话，SmUUID 的值不会改变。所以在洗白并且填写正确的 CustomUUID（Clover）/ SystemUUID（OC）之后，可以在 关于本机-系统报告-硬件概览 中看到此时的硬件UUID，复制并填入 config.plist 中的 SmUUID 即可。
+Clover 中的 SmUUID（硬件UUID）可以暂时不填写。正常情况下，MLB 和 ROM 一致的话，SmUUID 的值不会改变。所以在洗白并且填写正确的 CustomUUID（Clover）/ SystemUUID（OC）之后，可以在 关于本机-系统报告-硬件概览 中看到此时的 硬件 UUID，复制并填入 config.plist 中的 SmUUID 即可。
 
 ## 交流群
 

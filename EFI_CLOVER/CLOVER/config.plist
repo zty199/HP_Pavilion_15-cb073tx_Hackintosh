@@ -14,21 +14,6 @@
 				<true/>
 			</dict>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>MCFG</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>BGRT</string>
-			</dict>
-		</array>
 		<key>DSDT</key>
 		<dict>
 			<key>Patches</key>
@@ -146,58 +131,32 @@
 			</array>
 			<key>Fixes</key>
 			<dict>
-				<key>AddPNLF</key>
-				<true/>
 				<key>FixRTC</key>
+				<true/>
+				<key>AddPNLF</key>
 				<true/>
 			</dict>
 			<key>PNLF_UID</key>
 			<string>0x10</string>
-			<key>DropTables</key>
-			<array>
-				<dict>
-					<key>Signature</key>
-					<string>MCFG</string>
-				</dict>
-				<dict>
-					<key>Signature</key>
-					<string>DMAR</string>
-				</dict>
-				<dict>
-					<key>Signature</key>
-					<string>BGRT</string>
-				</dict>
-			</array>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>Timeout</key>
-		<integer>5</integer>
-		<key>NoEarlyProgress</key>
-		<true/>
+		<key>Arguments</key>
+		<string>-v dart=0 darkwake=10 agdpmod=vit9696 npci=0x2000</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
-		<key>Arguments</key>
-		<string>-v dart=0 darkwake=10 agdpmod=vit9696</string>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>XMPDetection</key>
 		<string>Yes</string>
+		<key>Timeout</key>
+		<integer>5</integer>
+		<key>NoEarlyProgress</key>
+		<true/>
 	</dict>
 	<key>GUI</key>
 	<dict>
-		<key>Theme</key>
-		<string>hp</string>
-		<key>Hide</key>
-		<array>
-			<string>BOOTX64.efi</string>
-			<string>Windows</string>
-			<string>Preboot</string>
-			<string>Recovery</string>
-		</array>
-		<key>Language</key>
-		<string>zh-Hant:-16899</string>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
@@ -207,12 +166,23 @@
 			<key>Legacy</key>
 			<false/>
 		</dict>
+		<key>Theme</key>
+		<string>hp</string>
+		<key>Language</key>
+		<string>zh-Hant:-16899</string>
+		<key>Hide</key>
+		<array>
+			<string>BOOTX64.efi</string>
+			<string>Windows</string>
+			<string>Preboot</string>
+			<string>Recovery</string>
+		</array>
 	</dict>
 	<key>CPU</key>
 	<dict>
-		<key>UseARTFrequency</key>
-		<true/>
 		<key>HWPEnable</key>
+		<true/>
+		<key>UseARTFrequency</key>
 		<true/>
 	</dict>
 	<key>Devices</key>
@@ -235,32 +205,36 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-unifiedmem</key>
-				<data>AAAAgA==</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>AAAbWQ==</data>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
 				<key>disable-external-gpu</key>
 				<data>AQAAAA==</data>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>AAAAgA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
 			</dict>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
+		<key>AppleRTC</key>
+		<false/>
+		<key>AppleIntelCPUPM</key>
+		<false/>
+		<key>KernelLapic</key>
+		<true/>
+		<key>KernelPm</key>
+		<true/>
 		<key>PanicNoKextDump</key>
 		<true/>
 		<key>EightApple</key>
-		<true/>
-		<key>KernelXCPM</key>
-		<true/>
-		<key>KernelLapic</key>
 		<true/>
 	</dict>
 	<key>RtVariables</key>
@@ -288,6 +262,8 @@
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
 		<string>0x09</string>
+		<key>NoRomInfo</key>
+		<true/>
 		<key>BiosVersion</key>
 		<string>MBP143.88Z.F000.B00.2006161755</string>
 		<key>BoardManufacturer</key>
@@ -323,6 +299,8 @@
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
+		<key>CustomUUID</key>
+		<string></string>
 		<key>InjectKexts</key>
 		<string>Detect</string>
 		<key>InjectSystemID</key>
@@ -348,6 +326,22 @@
 		<false/>
 		<key>MmioWhitelist</key>
 		<array>
+			<dict>
+				<key>Address</key>
+				<integer>4275159040</integer>
+				<key>Comment</key>
+				<string>Haswell: SB_RCBA is a 0x4 page memory region, containing SPI_BASE at 0x3800 (SPI_BASE_ADDRESS)</string>
+				<key>Enabled</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Address</key>
+				<integer>4278190080</integer>
+				<key>Comment</key>
+				<string>Generic: PCI root is a 0x1000 page memory region used by some firmwares</string>
+				<key>Enabled</key>
+				<false/>
+			</dict>
 		</array>
 		<key>ProtectMemoryRegions</key>
 		<false/>
@@ -368,6 +362,32 @@
 		<key>SignalAppleOS</key>
 		<false/>
 		<key>SyncRuntimePermissions</key>
+		<false/>
+		<key>FuzzyMatch</key>
+		<true/>
+		<key>KernelCache</key>
+		<string>Auto</string>
+		<key>AppleXcpmExtraMsrs</key>
+		<false/>
+		<key>AppleXcpmForceBoost</key>
+		<false/>
+		<key>DisableIoMapper</key>
+		<false/>
+		<key>DisableLinkeditJettison</key>
+		<false/>
+		<key>DisableRtcChecksum</key>
+		<false/>
+		<key>DummyPowerManagement</key>
+		<false/>
+		<key>ExternalDiskIcons</key>
+		<false/>
+		<key>IncreasePciBarSize</key>
+		<false/>
+		<key>PowerTimeoutKernelPanic</key>
+		<true/>
+		<key>ThirdPartyDrives</key>
+		<false/>
+		<key>XhciPortLimit</key>
 		<false/>
 	</dict>
 </dict>
