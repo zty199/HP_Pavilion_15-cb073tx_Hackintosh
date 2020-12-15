@@ -14,7 +14,7 @@ GPU: Intel HD Graphics 630（NVidia GeForce GTX 1050 已屏蔽）
 
 ## Clover 配置说明
 
-Clover 版本 为 5127，支持安装和引导 macOS Big Sur 11.0.1。
+Clover 版本 为 5127，支持安装和引导 macOS Big Sur 11.1 Beta 2。
 
 修复了 Type-C 接口 的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -30,7 +30,7 @@ Clover 版本 为 5127，支持安装和引导 macOS Big Sur 11.0.1。
 
 ## OpenCore 配置说明
 
-OpenCore 版本为 0.6.4，支持安装和引导 macOS Big Sur 11.0.1。
+OpenCore 版本为 0.6.4，支持安装和引导 macOS Big Sur 11.1 Beta 2。
 
 修复了 Type-C 接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -52,7 +52,9 @@ VoodooPS2 从 2.1.7 版本开始合并了 ELAN TouchPad 驱动相关代码，已
 
 （ApplePS2SmartTouchPad.kext 驱动修改和使用说明详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1819242-1-1.html ）
 
-## ALC295_PlugFix
+## ALCPlugFix-Swift
+
+https://github.com/black-dragon74/ALCPlugFix-Swift
 
 用于修复耳麦二合一插孔插入耳麦时无法切换到外置麦克风的问题，内有使用说明。
 
