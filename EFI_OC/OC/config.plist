@@ -1320,7 +1320,7 @@
 			<key>PlayChime</key>
 			<string>Auto</string>
 			<key>SetupDelay</key>
-			<integer>500000</integer>
+			<integer>0</integer>
 			<key>VolumeAmplifier</key>
 			<integer>0</integer>
 		</dict>
