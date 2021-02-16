@@ -14,7 +14,7 @@ GPU: Intel HD Graphics 630（NVidia GeForce GTX 1050 已屏蔽）
 
 ## Clover 配置说明
 
-Clover 版本 为 5129，支持安装和引导 macOS Big Sur 11.3 Beta。
+Clover 版本 为 5130，支持安装和引导 macOS Big Sur 11.3 Beta。
 
 修复了 Type-C 接口 的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -33,6 +33,8 @@ Clover 版本 为 5129，支持安装和引导 macOS Big Sur 11.3 Beta。
 OpenCore 版本为 0.6.6，支持安装和引导 macOS Big Sur 11.3 Beta。
 
 修复了 Type-C 接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
+
+修复了从 Windows 系统重启后进入其他系统（如 Linux，macOS 等）扬声器没有声音的问题（感谢OC交流群大佬 @哞 @常原）。
 
 更新了新的电池补丁（感谢OC交流群大佬 @iStar 和 @常原），解决OC引导Windows时睡眠唤醒后部分设备断电无法使用的问题（键盘，触摸板，网卡等）。
 

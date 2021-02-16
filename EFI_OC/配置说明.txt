@@ -8,6 +8,8 @@ https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
 修复了 Type-C 接口的视频输出和音频输出。
 
+修复了从 Windows 系统重启后进入其他系统（如 Linux，macOS 等）扬声器没有声音的问题。
+
 更新了新的电池补丁，解决 OC 引导 Windows 时睡眠唤醒后部分设备断电无法使用的问题（键盘，触摸板，网卡等）。
 
 添加了 SSDT-RTC0.aml 补丁，修复了每次重启时都会重启两次的问题。该补丁功能与 Clover 中勾选 FixRTC 选项效果等同。
