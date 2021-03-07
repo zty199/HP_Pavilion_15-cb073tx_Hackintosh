@@ -14,7 +14,7 @@ GPU: Intel HD Graphics 630（NVidia GeForce GTX 1050 已屏蔽）
 
 ## Clover 配置说明
 
-Clover 版本 为 5130，支持安装和引导 macOS Big Sur 11.3 Beta。
+Clover 版本 为 5131，支持安装和引导 macOS Big Sur 11.3 Beta 3。
 
 修复了 Type-C 接口 的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -22,25 +22,29 @@ Clover 版本 为 5130，支持安装和引导 macOS Big Sur 11.3 Beta。
 
 不再提供睡眠补丁，如有需要请在历史版本中自行提取添加。
 
+不再支持 FileVault 2，如有需要使用或者误开启请参考历史版本自行添加相关驱动。
+
 序列号已经洗白，但已经被使用过。请参照教程自行洗白。机型建议不用修改。
 
 耳麦输入有关问题见下！
 
-注意，SmUUID和CustomUUID已经暂时留空，填写说明见下！
+注意，SmUUID 和 CustomUUID 已经暂时留空，填写说明见下！
 
 ## OpenCore 配置说明
 
-OpenCore 版本为 0.6.6，支持安装和引导 macOS Big Sur 11.3 Beta。
+OpenCore 版本为 0.6.7，支持安装和引导 macOS Big Sur 11.3 Beta 3。
 
 修复了 Type-C 接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
 修复了从 Windows 系统重启后进入其他系统（如 Linux，macOS 等）扬声器没有声音的问题（感谢OC交流群大佬 @哞 @常原）。
 
-更新了新的电池补丁（感谢OC交流群大佬 @iStar 和 @常原），解决OC引导Windows时睡眠唤醒后部分设备断电无法使用的问题（键盘，触摸板，网卡等）。
+更新了新的电池补丁（感谢OC交流群大佬 @iStar @常原），解决 OC 引导 Windows 时睡眠唤醒后部分设备断电无法使用的问题（键盘，触摸板，网卡等）。
 
 添加了 SSDT-RTC0.aml 补丁，修复了每次重启时都会重启两次的问题（感谢OC交流群大佬 @iStar）。该补丁功能与 Clover 中勾选 FixRTC 选项效果等同。
 
 不再提供操作系统补丁和睡眠补丁，如有需要请在历史版本中提取并自行添加。
+
+不支持 FileVault 2 以及磁盘加密、安全启动等功能，如有需要请自行参照使用手册开启对应功能。
 
 序列号和 Clover 里的是同一份，记得自己洗白。
 
