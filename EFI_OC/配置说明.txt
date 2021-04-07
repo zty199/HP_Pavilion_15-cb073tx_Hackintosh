@@ -4,7 +4,7 @@ EFI维护地址：
 https://github.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
-这个是使用 OpenCore 0.6.7 引导的EFI，支持安装和引导 macOS Big Sur 11.3 Beta 3。
+这个是使用 OpenCore 0.6.8 引导的EFI，支持安装和引导 macOS Big Sur 11.3 Beta 6。
 
 修复了 Type-C 接口的视频输出和音频输出。
 
