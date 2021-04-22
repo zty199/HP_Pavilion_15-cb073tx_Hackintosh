@@ -4,11 +4,11 @@ EFI维护地址：
 https://github.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
-这个是使用 Clover 5132 引导的EFI，支持安装和引导 macOS Big Sur 11.3 Beta 6。
+这个是使用 Clover 5132 引导的EFI，支持安装和引导 macOS Big Sur 11.3。
 
 修复了 Type-C 接口的视频输出和音频输出。
 
-添加了风扇转速显示补丁，但只能显示转速，无法通过件控制。
+使用 VirtualSMC 替代 FakeSMC，支持双风扇转速显示。
 
 不再提供睡眠补丁，如有需要请在历史版本中自行提取添加。
 

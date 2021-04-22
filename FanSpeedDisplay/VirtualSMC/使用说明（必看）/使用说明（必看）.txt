@@ -1,0 +1,39 @@
+#使用说明（必看！！！）
+
+在 GitHub 上折磨了 大佬 1alessandro1 靠近一个礼拜之后，在 OpenCore 开发大佬 vit9696 的解释下，终于实现了在 VirtualSMC + SMCSuperIO 下读取风扇转速。
+
+测试机型依旧是光影精灵3，EC 型号为 ITE IT8987E。个人估计适用范围应该是 17年下半年 之前 生产的所有 Pavilion 畅游人系列（主板型号为 83XX 或更早），另外 4代暗影精灵应该也可以用，5代就不清楚了......
+
+教程参考 https://github.com/1alessandro1/HP-Pavilion-CE2072NL-macOS/issues/1，基本就是用 VirtualSMC-1.2.3_DEBUG 版本，把 ERAM 部分 256 个地址全部读取了一遍，观察获得的数据是否与转速有直接关系。
+
+理论上来说，上述机型的风扇地址偏移量应该都是 0xB2 0xB3 和 0xC3 0xC4 这两组（转速为 16 位，低 8 位在前，高 8 位在后）。单风扇机型优先尝试 0xC3 0xC4 这组。
+
+config.plist 中 设备属性 部分添加 EC 设备（地址可在 DSDT 中搜索 "Device (LPCB)" 获得，参考 "Name (_ADR, 0x001F0000)  // _ADR: Address"），但应该都是 PciRoot(0x0)/Pci(0x1f,0x0)。
+
+以下为参考样例，具体填写参考 https://github.com/acidanthera/VirtualSMC/blob/master/Docs/EmbeddedControllers.md。
+
+<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
+<dict>
+	<key>ec-device</key>
+	<string>generic</string>
+	<key>fan-count</key>
+	<data>AgAAAA==</data>
+	<key>fan0-addr</key>
+	<data>swAAAA==</data>
+	<key>fan0-big</key>
+	<data>AQAAAA==</data>
+	<key>fan0-size</key>
+	<data>AgAAAA==</data>
+	<key>fan1-addr</key>
+	<data>xAAAAA==</data>
+	<key>fan1-big</key>
+	<data>AQAAAA==</data>
+	<key>fan1-size</key>
+	<data>AgAAAA==</data>
+</dict>
+
+fanX-size 代表风扇转速的数值占用大小，这里转速占 2 个 8 位，即 16 位。
+fanX-big  代表大端读取（和小端转换一个意思），所以风扇转速地址写高 8 位地址。
+fanX-addr 代表风扇转速地址偏移量，此处因为使用 big endian 所以取高 8 位。
+
+By zty199 2021.04.22

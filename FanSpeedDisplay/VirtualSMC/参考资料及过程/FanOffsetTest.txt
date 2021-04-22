@@ -1,0 +1,53 @@
+ssiownd	Is FAN related	Is Temperature shown in ManFansControl
+0x00	false
+0x05	false
+0x0A	false
+0x0F	false
+0x14	false
+0x19	false
+0x1E	false		(Forgot to record...)
+0x23	false		true
+0x28	false		false
+0x2D	false		false
+0x32	false		true
+0x37	false		true
+0x3C	false		false
+0x41	false		true
+0x46	false		true
+0x4B	false		false
+0x50	false		true
+0x55	false		true		?(0x58 CPU Promixity Temperature)
+0x5A	false		false
+0x5F	false		false
+0x64	false		true
+0x69	false		false
+0x6E	false		false
+0x73	false		false
+0x78	false		true
+0x7D	false		true
+0x82	false		false
+0x87	false		false
+0x8C	false		true
+0x91	false		false
+0x96	false		false
+0x9B	false		true
+0xA0	false		true
+0xA5	false		false
+0xAA	false		false
+0xAF	true		true		?(0xB2 0xB3	0xB3 * 256 + 0xB2 = Fan Speed)
+0xB4	false		true
+0xB9	false		false
+0xBE	false		true
+0xC3	true		false		?(0xC3 0xC4	Second Fan Connector, formula as above)
+0xC8	false		false
+0xCD	false		false
+0xD2	false		false
+0xD7	false		false
+0xDC	false		false
+0xE1	false		true		?(Seems to be related to maximum temperature limits)
+0xE6	false		true		?(Seems to be related to maximum temperature limits)
+0xEB	false		true
+0xF0	false		false
+0xF5	false		false
+0xFA	false		true
+0xFF	false		true

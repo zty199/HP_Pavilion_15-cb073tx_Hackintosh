@@ -14,11 +14,11 @@ GPU: Intel HD Graphics 630（NVidia GeForce GTX 1050 已屏蔽）
 
 ## Clover 配置说明
 
-Clover 版本 为 5132，支持安装和引导 macOS Big Sur 11.3 Beta 6。
+Clover 版本 为 5132，支持安装和引导 macOS Big Sur 11.3。
 
 修复了 Type-C 接口 的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
-添加了风扇转速显示补丁 SSDT-FANS.aml，但只能显示转速，无法通过软件控制。（具体教程详见远景论坛帖子 http://bbs.pcbeta.com/viewthread-1829706-1-1.html ，计算公式已经修改为正确公式）
+使用 VirtualSMC 替代 FakeSMC，支持双风扇转速显示（感谢 GitHub 大佬 [1alessandro1](https://github.com/1alessandro1) 和 [vit9696](https://github.com/vit9696)）。
 
 不再提供睡眠补丁，如有需要请在历史版本中自行提取添加。
 
@@ -32,11 +32,13 @@ Clover 版本 为 5132，支持安装和引导 macOS Big Sur 11.3 Beta 6。
 
 ## OpenCore 配置说明
 
-OpenCore 版本为 0.6.8，支持安装和引导 macOS Big Sur 11.3 Beta 6。
+OpenCore 版本为 0.6.8，支持安装和引导 macOS Big Sur 11.3。
 
 修复了 Type-C 接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
 修复了从 Windows 系统重启后进入其他系统（如 Linux，macOS 等）扬声器没有声音的问题（感谢OC交流群大佬 @哞 @常原）。
+
+使用 VirtualSMC + SMCSuperIO，支持双风扇转速显示。
 
 更新了新的电池补丁（感谢OC交流群大佬 @iStar @常原），解决 OC 引导 Windows 时睡眠唤醒后部分设备断电无法使用的问题（键盘，触摸板，网卡等）。
 
@@ -73,6 +75,10 @@ https://github.com/black-dragon74/ALCPlugFix-Swift
 ## 关于 Type-C 接口 HDMI_DP 数字音频输出
 
 使用 AppleALC.kext + FakePCIID.kext + FakePCIID_Intel_HDMI_Audio.kext ，在声卡设备属性添加 device-id 属性，类型 Data ，字段值 70A10000 ，即可正常使用音频输出。使用 USB DAC 转换3.5mm耳机接口与此无关，可正常使用。（EFI 中定制了 FakePCIID，合并了驱动补丁为一个）
+
+## 关于风扇转速显示补丁
+
+详情见 FanSpeedDisplay 文件夹，内有说明以及相关资料。
 
 ## Clover 中 SmUUID / CustomUUID 和 OC 中 SystemUUID 填写说明
 

@@ -1,0 +1,20 @@
+#使用说明（必看！！！）
+
+这个补丁针对有些（？）笔记本不能正确读取风扇转速的问题写的。（只在惠普光影精灵/暗影精灵实验过！）是利用了FakeSMC和其组件对DSDT中的风扇转速进行读取。
+
+README.pdf是3.5.2的官方说明文档，注明了所有相关驱动的适用对象。其中最下面ACPIMonitor.kext有读取DSDT数据的教程连接，网址在这里：https://www.insanelymac.com/forum/topic/309328-howto-acpi-access-for-monitoring/
+
+我已经做好了SSDT-FANS.dsl的补丁文件，放在了ACPI文件夹，理论上惠普光影和暗影可以不用改，风扇的参数应该是通用的，最好检查一下自己的DSDT里有没有\_TZ.TZ01.FRSP这个东西。没有的话还要修改。(P.S.至于其他机型肯定是要大改了......不仅要改风扇的数据源，还要改计算公式，才能正确显示转速。)
+
+SSDT-FANS.dsl不能直接用！！！
+SSDT-FANS.dsl不能直接用！！！
+SSDT-FANS.dsl不能直接用！！！
+请用Maciasl编译成aml文件再放入自己的EFI/CLOVER/ACPI/patched文件夹里。
+
+不出意外的话，使用HWMonitorSMC2可以看到风扇转速了。其他监控软件应该也可以。
+
+如果使用有问题请@我。
+
+(P.S.如果你看懂了官方的教程，dsl里面我留了一些注释，相信你也能看懂，可以自己增加一个温度显示或者更多)
+
+By zty199 2019.10.15
