@@ -19,21 +19,20 @@ config.plist 中 设备属性 部分添加 EC 设备（地址可在 DSDT 中搜�
 	<key>fan-count</key>
 	<data>AgAAAA==</data>
 	<key>fan0-addr</key>
-	<data>swAAAA==</data>
+	<data>sgAAAA==</data>
 	<key>fan0-big</key>
-	<data>AQAAAA==</data>
+	<data>AAAAAA==</data>
 	<key>fan0-size</key>
 	<data>AgAAAA==</data>
 	<key>fan1-addr</key>
-	<data>xAAAAA==</data>
+	<data>wwAAAA==</data>
 	<key>fan1-big</key>
-	<data>AQAAAA==</data>
+	<data>AAAAAA==</data>
 	<key>fan1-size</key>
 	<data>AgAAAA==</data>
 </dict>
 
 fanX-size 代表风扇转速的数值占用大小，这里转速占 2 个 8 位，即 16 位。
-fanX-big  代表大端读取（和小端转换一个意思），所以风扇转速地址写高 8 位地址。
-fanX-addr 代表风扇转速地址偏移量，此处因为使用 big endian 所以取高 8 位。
+fanX-addr 代表风扇转速地址偏移量，这里写低 8 位偏移量。
 
 By zty199 2021.04.22
