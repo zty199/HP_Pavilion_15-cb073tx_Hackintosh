@@ -129,7 +129,7 @@
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>XMPDetection</key>
-		<string>Yes</string>
+		<false/>
 		<key>Timeout</key>
 		<integer>5</integer>
 		<key>NoEarlyProgress</key>
@@ -149,13 +149,11 @@
 		<key>Theme</key>
 		<string>hp</string>
 		<key>Language</key>
-		<string>zh-Hant:-16899</string>
+		<string>en-US:0</string>
 		<key>Hide</key>
 		<array>
 			<string>BOOTX64.efi</string>
 			<string>Windows</string>
-			<string>Preboot</string>
-			<string>Recovery</string>
 		</array>
 	</dict>
 	<key>CPU</key>
@@ -176,14 +174,14 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
+				<key>alc-delay</key>
+				<data>9AEAAA==</data>
+				<key>alc-verbs</key>
+				<data>AQAAAA==</data>
 				<key>device-id</key>
 				<data>cKEAAA==</data>
 				<key>layout-id</key>
 				<data>GAAAAA==</data>
-				<key>alc-verbs</key>
-				<data>AQAAAA==</data>
-				<key>alc-delay</key>
-				<data>9AEAAA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -193,14 +191,14 @@
 				<data>AQAAAA==</data>
 				<key>disable-external-gpu</key>
 				<data>AQAAAA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
 				<key>framebuffer-unifiedmem</key>
 				<data>AAAAgA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
 			<dict>
@@ -352,8 +350,6 @@
 		<false/>
 		<key>ProtectUefiServices</key>
 		<false/>
-		<key>ProvideConsoleGopEnable</key>
-		<true/>
 		<key>ProvideCustomSlide</key>
 		<true/>
 		<key>ProvideMaxSlide</key>
@@ -378,8 +374,6 @@
 		<false/>
 		<key>DisableLinkeditJettison</key>
 		<true/>
-		<key>DisableRtcChecksum</key>
-		<false/>
 		<key>DummyPowerManagement</key>
 		<false/>
 		<key>ExternalDiskIcons</key>

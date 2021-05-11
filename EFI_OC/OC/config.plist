@@ -1221,7 +1221,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Mg==</data>
 				<key>boot-args</key>
-				<string>-v dart=0 darkwake=10 agdpmod=vit9696</string>
+				<string>dart=0 darkwake=10 agdpmod=vit9696</string>
 				<key>csr-active-config</key>
 				<data>5wsAAA==</data>
 				<key>prev-lang:kbd</key>
