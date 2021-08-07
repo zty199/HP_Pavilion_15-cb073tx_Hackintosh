@@ -4,20 +4,9 @@ EFI维护地址：
 https://github.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
-这个是使用 OpenCore 0.7.0 引导的EFI，支持安装和引导 macOS Big Sur 11.5。
-
-修复了 Type-C 接口的视频输出和音频输出。
-
-修复了从 Windows 系统重启后进入其他系统（如 Linux，macOS 等）扬声器没有声音的问题。
-
-使用 VirtualSMC + SMCSuperIO，支持双风扇转速显示。
-
-更新了新的电池补丁，解决 OC 引导 Windows 时睡眠唤醒后部分设备断电无法使用的问题（键盘，触摸板，网卡等）。
-
-添加了 SSDT-RTC0.aml 补丁，修复了每次重启时都会重启两次的问题。该补丁功能与 Clover 中勾选 FixRTC 选项效果等同。
-
-不再提供操作系统补丁和睡眠补丁，如有需要请自行在历史版本中提取并添加。
+这个是使用 OpenCore 0.7.2 引导的EFI，支持安装和引导 macOS Monterey 12.0 Beta 4。
 
 序列号已经洗白，但已经被群友使用过。请参照教程自行洗白。机型建议不用修改。
 
-欢迎加入 OpenCore技术交流群: 538643249
+欢迎加入	惠普电脑装Mac交流群: 145090108
+	OpenCore车技交流群: 838739020

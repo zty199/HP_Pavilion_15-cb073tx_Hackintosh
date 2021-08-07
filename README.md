@@ -14,7 +14,7 @@ GPU: Intel HD Graphics 630（NVidia GeForce GTX 1050 已屏蔽）
 
 ## Clover 配置说明
 
-Clover 版本 为 5136，支持安装和引导 macOS Big Sur 11.5。
+Clover 版本 为 5138，支持安装和引导 macOS Monterey 12.0 Beta 4。
 
 修复了 Type-C 接口 的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -32,7 +32,7 @@ Clover 版本 为 5136，支持安装和引导 macOS Big Sur 11.5。
 
 ## OpenCore 配置说明
 
-OpenCore 版本为 0.7.0，支持安装和引导 macOS Big Sur 11.5。
+OpenCore 版本为 0.7.2，支持安装和引导 macOS Monterey 12.0 Beta 4。
 
 修复了 Type-C 接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -92,6 +92,6 @@ Clover 中的 SmUUID（硬件UUID）可以暂时不填写。正常情况下，ML
 
 ## 交流群
 
-惠普电脑装Mac交流群: 543758684
+惠普电脑装Mac交流群: 145090108
 
-OpenCore技术交流群: 538643249
+OpenCore车技交流群: 838739020
