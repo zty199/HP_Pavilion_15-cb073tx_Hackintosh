@@ -14,7 +14,7 @@ GPU: Intel HD Graphics 630（NVidia GeForce GTX 1050 已屏蔽）
 
 ## Clover 配置说明
 
-Clover 版本 为 5138，支持安装和引导 macOS Monterey 12.0 Beta 4。
+Clover 版本 为 5139，支持安装和引导 macOS Monterey 12.0 Beta 6。
 
 修复了 Type-C 接口 的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -32,7 +32,7 @@ Clover 版本 为 5138，支持安装和引导 macOS Monterey 12.0 Beta 4。
 
 ## OpenCore 配置说明
 
-OpenCore 版本为 0.7.2，支持安装和引导 macOS Monterey 12.0 Beta 4。
+OpenCore 版本为 0.7.3，支持安装和引导 macOS Monterey 12.0 Beta 6。
 
 修复了 Type-C 接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 

@@ -4,7 +4,7 @@ EFI维护地址：
 https://github.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 https://gitee.com/zty199/HP_Pavilion_15-cb073tx_Hackintosh
 
-这个是使用 OpenCore 0.7.2 引导的EFI，支持安装和引导 macOS Monterey 12.0 Beta 4。
+这个是使用 OpenCore 0.7.3 引导的EFI，支持安装和引导 macOS Monterey 12.0 Beta 6。
 
 序列号已经洗白，但已经被群友使用过。请参照教程自行洗白。机型建议不用修改。
 
