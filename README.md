@@ -14,7 +14,7 @@ GPU: Intel HD Graphics 630（NVidia GeForce GTX 1050 已屏蔽）
 
 ## Clover 配置说明
 
-Clover 版本 为 5142，支持安装和引导 macOS Monterey 12.1 Beta。
+Clover 版本 为 5143，支持安装和引导 macOS Monterey 12.2 Beta。
 
 修复了 Type-C 接口 的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -32,7 +32,7 @@ Clover 版本 为 5142，支持安装和引导 macOS Monterey 12.1 Beta。
 
 ## OpenCore 配置说明
 
-OpenCore 版本为 0.7.5，支持安装和引导 macOS Monterey 12.1 Beta。
+OpenCore 版本为 0.7.7，支持安装和引导 macOS Monterey 12.2 Beta。
 
 修复了 Type-C 接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
@@ -74,7 +74,7 @@ https://github.com/black-dragon74/ALCPlugFix-Swift
 
 ## 关于 Type-C 接口 HDMI_DP 数字音频输出
 
-使用 AppleALC.kext + FakePCIID.kext + FakePCIID_Intel_HDMI_Audio.kext ，在声卡设备属性添加 device-id 属性，类型 Data ，字段值 70A10000 ，即可正常使用音频输出。使用 USB DAC 转换3.5mm耳机接口与此无关，可正常使用。（EFI 中定制了 FakePCIID，合并了驱动补丁为一个）
+在声卡设备属性添加 device-id 属性，类型 Data ，字段值 70A10000 ；添加 compatible 属性，类型 String ，字段值 pci8086,a170 ，即可正常使用音频输出。
 
 ## 关于风扇转速显示补丁
 
