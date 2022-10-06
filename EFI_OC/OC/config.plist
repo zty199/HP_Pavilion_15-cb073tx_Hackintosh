@@ -40,7 +40,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable External GPU</string>
+				<string>Disable Discrete GPU</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -439,8 +439,6 @@
 				<data>9AEAAA==</data>
 				<key>alc-verbs</key>
 				<data>AQAAAA==</data>
-				<key>compatible</key>
-				<string>pci8086,a170</string>
 				<key>device-id</key>
 				<data>cKEAAA==</data>
 				<key>layout-id</key>
@@ -1608,7 +1606,7 @@
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
-				<string>Ext4Dxe.efi</string>
+				<string>ExFatDxe.efi</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -1620,7 +1618,7 @@
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
-				<string>ExFatDxe.efi</string>
+				<string>Ext4Dxe.efi</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>

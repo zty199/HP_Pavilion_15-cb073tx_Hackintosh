@@ -32,7 +32,7 @@ Clover 版本 为 5149，支持安装和引导 macOS Ventura 13 Beta。
 
 ## OpenCore 配置说明
 
-OpenCore 版本为 0.8.4，支持安装和引导 macOS Ventura 13 Beta。
+OpenCore 版本为 0.8.5，支持安装和引导 macOS Ventura 13 Beta 8。
 
 修复了 Type-C 接口的视频输出和音频输出（感谢OC交流群大佬 @常原）。
 
